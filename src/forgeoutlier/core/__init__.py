@@ -41,4 +41,3 @@ __all__ = [
     "NUMERICAL_CONSTANTS",
     "sanitize_input_path",
 ]
-

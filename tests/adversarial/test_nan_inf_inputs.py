@@ -5,11 +5,16 @@ import pytest
 import torch
 
 from forgeoutlier.core.exceptions import ExecutionFailureError, NumericalInstabilityError
+from forgeoutlier.eval.metrics import (
+    compute_pr_curve,
+    compute_roc_curve,
+)
 from forgeoutlier.models.model import DeepfakeModel
-from forgeoutlier.ood.fitting import normalize_l2, fit_centroid_and_covariance, calibrate_quantile_threshold
-from forgeoutlier.ood.mahalanobis import MahalanobisScorer
 from forgeoutlier.ood.cosine import CosineCentroidScorer
-from forgeoutlier.eval.metrics import compute_roc_curve, compute_pr_curve, compute_auroc, compute_auprc
+from forgeoutlier.ood.fitting import (
+    normalize_l2,
+)
+from forgeoutlier.ood.mahalanobis import MahalanobisScorer
 
 
 def test_normalize_l2_with_zeros() -> None:

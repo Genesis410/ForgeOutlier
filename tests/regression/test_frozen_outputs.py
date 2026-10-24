@@ -1,11 +1,10 @@
 """Regression test: Numerical reproducibility and frozen model outputs."""
 
 import numpy as np
-import pytest
 import torch
 
 from forgeoutlier.models.model import DeepfakeModel
-from forgeoutlier.ood.fitting import fit_centroid_and_covariance, calibrate_quantile_threshold
+from forgeoutlier.ood.fitting import calibrate_quantile_threshold, fit_centroid_and_covariance
 from forgeoutlier.ood.mahalanobis import MahalanobisScorer
 
 

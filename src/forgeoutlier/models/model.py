@@ -1,11 +1,9 @@
 """Complete deepfake detection model combining backbone and classifier."""
 
-from typing import Tuple, Dict, Any
+import numpy as np
 import torch
 import torch.nn as nn
-import numpy as np
 
-from forgeoutlier.core.protocols import EncoderProtocol
 from forgeoutlier.core.exceptions import ExecutionFailureError
 from forgeoutlier.models.backbone import MobileNetV3SmallBackbone
 from forgeoutlier.models.classifier import BinaryClassifierHead
@@ -28,7 +26,7 @@ class DeepfakeModel(nn.Module):
     def feature_dim(self) -> int:
         return self.features.feature_dim
 
-    def forward(self, x: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:
+    def forward(self, x: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor]:
         """Forward pass returning (logits, features)."""
         z = self.features(x)
         logits = self.classifier(z)
@@ -56,7 +54,9 @@ class DeepfakeModel(nn.Module):
             raise ExecutionFailureError(f"Input array must be 3D or 4D, got shape {x.shape}")
 
         if x_clean.shape[1] != 3:
-            raise ExecutionFailureError(f"Expected 3 channels (RGB) at dim 1, got shape {x_clean.shape}")
+            raise ExecutionFailureError(
+                f"Expected 3 channels (RGB) at dim 1, got shape {x_clean.shape}"
+            )
 
         device = next(self.parameters()).device
         tensor_x = torch.from_numpy(x_clean).to(device)

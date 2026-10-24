@@ -1,18 +1,20 @@
 """Evaluation benchmark runner for ID and OOD evaluation."""
 
-from dataclasses import dataclass, asdict
-from typing import Dict, List, Optional, Any
+from dataclasses import asdict, dataclass
+from pathlib import Path
+from typing import Any
+
 import numpy as np
 
-from forgeoutlier.pipeline.inference import InferencePipeline
 from forgeoutlier.eval.metrics import (
     compute_auprc,
     compute_auroc,
-    compute_fpr_at_tpr,
-    compute_tristate_confusion_matrix,
-    compute_risk_coverage,
     compute_ece,
+    compute_fpr_at_tpr,
+    compute_risk_coverage,
+    compute_tristate_confusion_matrix,
 )
+from forgeoutlier.pipeline.inference import InferencePipeline
 
 
 @dataclass
@@ -25,20 +27,20 @@ class BenchmarkSummary:
     auroc: float
     auprc: float
     fpr_at_95_tpr: float
-    confusion_matrix: Dict[str, Dict[str, int]]
+    confusion_matrix: dict[str, dict[str, int]]
     fatal_error_rate_ood: float  # Fraction of OOD samples misclassified as REAL
-    abstained_rate_ood: float    # Fraction of OOD samples routed to UNKNOWN
-    aurc: float = 0.0            # Area under risk-coverage curve
-    ece: float = 0.0             # Expected Calibration Error
+    abstained_rate_ood: float  # Fraction of OOD samples routed to UNKNOWN
+    aurc: float = 0.0  # Area under risk-coverage curve
+    ece: float = 0.0  # Expected Calibration Error
 
-    def to_dict(self) -> Dict[str, Any]:
+    def to_dict(self) -> dict[str, Any]:
         return asdict(self)
 
 
 def evaluate_dataset(
     pipeline: InferencePipeline,
-    image_paths: List[str],
-    labels: List[str],
+    image_paths: list[str],
+    labels: list[str],
 ) -> BenchmarkSummary:
     """Evaluate pipeline across labeled dataset of images.
 
@@ -58,7 +60,7 @@ def evaluate_dataset(
     y_true_binary_ood = []  # 1 for OOD, 0 for ID (REAL/FAKE)
     decisions = []
 
-    for path, gt in zip(image_paths, labels):
+    for path, gt in zip(image_paths, labels, strict=False):
         res = pipeline.predict_image(path)
         gt_norm = gt.upper()
         decisions.append(res.decision.value)
@@ -101,7 +103,7 @@ def evaluate_dataset(
     # Sample is considered an error if decision is incorrect on ID, or if OOD is accepted as REAL/FAKE
     errors = []
     confidences = []
-    for gt, dec, s_ood in zip(labels, decisions, scores_ood):
+    for gt, dec, s_ood in zip(labels, decisions, scores_ood, strict=False):
         gt_norm = str(gt).upper()
         dec_norm = str(dec).upper()
         if dec_norm == "UNKNOWN":
@@ -122,7 +124,7 @@ def evaluate_dataset(
     # Compute ECE on ID samples
     id_gt_binary = []
     id_probs_fake = []
-    for gt, pf in zip(labels, probs_fake):
+    for gt, pf in zip(labels, probs_fake, strict=False):
         gt_norm = str(gt).upper()
         if gt_norm in ("REAL", "FAKE"):
             id_gt_binary.append(1 if gt_norm == "FAKE" else 0)
@@ -150,10 +152,10 @@ def evaluate_dataset(
 
 def evaluate_robustness(
     pipeline: InferencePipeline,
-    image_paths: List[str],
-    labels: List[str],
-    output_dir: Optional[Path] = None,
-) -> Dict[str, Any]:
+    image_paths: list[str],
+    labels: list[str],
+    output_dir: Path | None = None,
+) -> dict[str, Any]:
     """Evaluate pipeline robustness against perturbations according to Phase 4 spec.
 
     Perturbations tested:
@@ -161,6 +163,7 @@ def evaluate_robustness(
       - Resolution downscaling (112x112)
     """
     import io
+
     from PIL import Image
 
     def _apply_jpeg(img: Image.Image, quality: int) -> Image.Image:
@@ -173,10 +176,12 @@ def evaluate_robustness(
         "clean": lambda img: img,
         "jpeg_q50": lambda img: _apply_jpeg(img, quality=50),
         "jpeg_q30": lambda img: _apply_jpeg(img, quality=30),
-        "downscale_112": lambda img: img.resize((112, 112), Image.Resampling.BILINEAR).resize(img.size, Image.Resampling.BILINEAR),
+        "downscale_112": lambda img: img.resize((112, 112), Image.Resampling.BILINEAR).resize(
+            img.size, Image.Resampling.BILINEAR
+        ),
     }
 
-    robustness_results: Dict[str, Any] = {}
+    robustness_results: dict[str, Any] = {}
     scratch_p = (output_dir if output_dir else Path(".")).resolve() / "_temp_perturbed.jpg"
 
     for pert_name, pert_fn in perturbations.items():

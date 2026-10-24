@@ -1,9 +1,7 @@
 """Cosine distance to centroid OOD scoring engine."""
 
-from typing import Tuple
 import numpy as np
 
-from forgeoutlier.core.exceptions import NumericalInstabilityError
 from forgeoutlier.core.protocols import OODScorerProtocol
 from forgeoutlier.ood.fitting import normalize_l2
 
@@ -66,7 +64,7 @@ class CosineCentroidScorer(OODScorerProtocol):
 
         return dist[0:1] if single_sample else dist
 
-    def is_outlier(self, embeddings: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
+    def is_outlier(self, embeddings: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
         """Determine outlier status based on calibrated threshold."""
         scores = self.score(embeddings)
         outlier_flags = scores > self._threshold

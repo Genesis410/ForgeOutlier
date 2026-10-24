@@ -1,22 +1,20 @@
 """Adversarial testing: corrupted, truncated, and random binary inputs."""
 
-import io
 from pathlib import Path
+
 import numpy as np
 import pytest
-from PIL import Image
 
-from forgeoutlier.core.exceptions import CorruptedMediaError, ExecutionFailureError, SecurityIntegrityError
+from forgeoutlier.core.exceptions import CorruptedMediaError, ExecutionFailureError
 from forgeoutlier.media.image import load_image
 from forgeoutlier.media.video import extract_video_frames
-from forgeoutlier.models.loader import load_checkpoint
 from forgeoutlier.ood.serialization import load_ood_artifact
 
 
 def test_corrupted_image_header(tmp_path: Path) -> None:
     """Corrupted image header raises CorruptedMediaError or ExecutionFailureError."""
     corrupted_file = tmp_path / "corrupted.jpg"
-    corrupted_file.write_bytes(b"\xFF\xD8\xFF\xE0" + b"\x00" * 20)
+    corrupted_file.write_bytes(b"\xff\xd8\xff\xe0" + b"\x00" * 20)
 
     with pytest.raises((CorruptedMediaError, ExecutionFailureError)):
         load_image(str(corrupted_file))
@@ -49,7 +47,7 @@ def test_empty_zero_byte_media(tmp_path: Path) -> None:
 def test_corrupted_ood_npz_archive(tmp_path: Path) -> None:
     """Corrupted or non-ZIP OOD artifact raises ExecutionFailureError."""
     bad_npz = tmp_path / "invalid.npz"
-    bad_npz.write_bytes(b"PK\x03\x04" + b"\xFF" * 50)
+    bad_npz.write_bytes(b"PK\x03\x04" + b"\xff" * 50)
 
     with pytest.raises(ExecutionFailureError):
         load_ood_artifact(str(bad_npz))

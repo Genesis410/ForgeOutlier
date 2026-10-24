@@ -23,4 +23,3 @@ __all__ = [
     "save_ood_artifact",
     "load_ood_artifact",
 ]
-

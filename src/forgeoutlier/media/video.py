@@ -1,7 +1,7 @@
 """Video ingestion, uniform frame sampling, and bounded streaming."""
 
-from pathlib import Path
-from typing import Generator, List, Optional, Tuple
+from collections.abc import Generator
+
 import cv2
 import numpy as np
 
@@ -22,14 +22,14 @@ class VideoStream:
         self,
         video_path: str,
         target_samples: int = MEDIA_LIMITS.default_video_samples,
-        target_size: Tuple[int, int] = (224, 224),
+        target_size: tuple[int, int] = (224, 224),
     ) -> None:
         self.video_path = video_path
         self.target_samples = target_samples
         self.target_size = target_size
-        self._cap: Optional[cv2.VideoCapture] = None
-        self._meta: Optional[MediaMeta] = None
-        self._sample_indices: List[int] = []
+        self._cap: cv2.VideoCapture | None = None
+        self._meta: MediaMeta | None = None
+        self._sample_indices: list[int] = []
 
     def __enter__(self) -> "VideoStream":
         resolved_path = sanitize_input_path(self.video_path)
@@ -79,10 +79,10 @@ class VideoStream:
         return self._meta
 
     @property
-    def sample_indices(self) -> List[int]:
+    def sample_indices(self) -> list[int]:
         return list(self._sample_indices)
 
-    def frames(self) -> Generator[Tuple[int, np.ndarray], None, None]:
+    def frames(self) -> Generator[tuple[int, np.ndarray], None, None]:
         """Yield (frame_index, frame_array_chw) one frame at a time."""
         if self._cap is None or not self._cap.isOpened():
             raise ExecutionFailureError("VideoStream is not open.")
@@ -96,7 +96,9 @@ class VideoStream:
 
             frame_rgb = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2RGB)
             if (frame_rgb.shape[1], frame_rgb.shape[0]) != (target_w, target_h):
-                frame_rgb = cv2.resize(frame_rgb, (target_w, target_h), interpolation=cv2.INTER_LINEAR)
+                frame_rgb = cv2.resize(
+                    frame_rgb, (target_w, target_h), interpolation=cv2.INTER_LINEAR
+                )
 
             arr = frame_rgb.astype(np.float32) / 255.0
             chw = np.transpose(arr, (2, 0, 1))
@@ -106,8 +108,8 @@ class VideoStream:
 def extract_video_frames(
     video_path: str,
     target_samples: int = MEDIA_LIMITS.default_video_samples,
-    target_size: Tuple[int, int] = (224, 224),
-) -> Tuple[np.ndarray, List[int], MediaMeta]:
+    target_size: tuple[int, int] = (224, 224),
+) -> tuple[np.ndarray, list[int], MediaMeta]:
     """Uniformly sample frames from video file within memory bounds.
 
     Args:
@@ -155,7 +157,7 @@ def extract_video_frames(
         # Linspace generates equidistant indices across the video duration
         sample_indices = np.linspace(0, total_frames - 1, num=n_samples, dtype=int).tolist()
 
-        frames_list: List[np.ndarray] = []
+        frames_list: list[np.ndarray] = []
         target_h, target_w = target_size
 
         for idx in sample_indices:
@@ -170,7 +172,9 @@ def extract_video_frames(
 
             # Resize if needed
             if (frame_rgb.shape[1], frame_rgb.shape[0]) != (target_w, target_h):
-                frame_rgb = cv2.resize(frame_rgb, (target_w, target_h), interpolation=cv2.INTER_LINEAR)
+                frame_rgb = cv2.resize(
+                    frame_rgb, (target_w, target_h), interpolation=cv2.INTER_LINEAR
+                )
 
             # Convert to float32 (3, H, W) in [0.0, 1.0]
             arr = frame_rgb.astype(np.float32) / 255.0

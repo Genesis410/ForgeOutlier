@@ -5,15 +5,16 @@ and Hard OOD (Anime/Cartoon, Medical/Microscopy, Deep Underwater, Scenery/Abstra
 Saves images directly as valid JPEG/PNG and creates ground-truth manifest JSON.
 """
 
-from pathlib import Path
 import json
+from pathlib import Path
+
 import numpy as np
 from PIL import Image
 
 
 def generate_benchmark_dataset(
     base_dir: Path,
-    n_per_category: Optional[int] = None,
+    n_per_category: int | None = None,
     n_real: int = 100,
     n_fake: int = 100,
     n_ood_total: int = 50,
@@ -50,21 +51,30 @@ def generate_benchmark_dataset(
 
     manifest_entries = []
 
-    def _save_and_record(img_arr: np.ndarray, filename: str, label: str, domain: str, fmt: str = "JPEG", quality: int = 95):
+    def _save_and_record(
+        img_arr: np.ndarray,
+        filename: str,
+        label: str,
+        domain: str,
+        fmt: str = "JPEG",
+        quality: int = 95,
+    ):
         img_p = images_dir / filename
         if fmt == "PNG":
             Image.fromarray(img_arr).save(img_p, format="PNG")
         else:
             Image.fromarray(img_arr).save(img_p, format="JPEG", quality=quality)
-        
+
         sha256 = hashlib.sha256(img_p.read_bytes()).hexdigest()
-        manifest_entries.append({
-            "path": str(img_p),
-            "label": label,
-            "domain": domain,
-            "sha256": sha256,
-            "size_bytes": img_p.stat().st_size,
-        })
+        manifest_entries.append(
+            {
+                "path": str(img_p),
+                "label": label,
+                "domain": domain,
+                "sha256": sha256,
+                "size_bytes": img_p.stat().st_size,
+            }
+        )
 
     # Category 1: ID - Real Faces
     for i in range(c_real):
@@ -72,7 +82,9 @@ def generate_benchmark_dataset(
         g = rng.normal(140, 15, (224, 224))
         b = rng.normal(120, 15, (224, 224))
         img_arr = np.stack([r, g, b], axis=-1).clip(0, 255).astype(np.uint8)
-        _save_and_record(img_arr, f"id_real_{i:03d}.jpg", "REAL", "id_natural", fmt="JPEG", quality=95)
+        _save_and_record(
+            img_arr, f"id_real_{i:03d}.jpg", "REAL", "id_natural", fmt="JPEG", quality=95
+        )
 
     # Category 2: ID - Fake / Manipulated
     for i in range(c_fake):
@@ -81,7 +93,9 @@ def generate_benchmark_dataset(
         b = rng.normal(120, 15, (224, 224))
         r[80:144, 80:144] += rng.uniform(20, 50, (64, 64))
         img_arr = np.stack([r, g, b], axis=-1).clip(0, 255).astype(np.uint8)
-        _save_and_record(img_arr, f"id_fake_{i:03d}.jpg", "FAKE", "id_manipulated", fmt="JPEG", quality=95)
+        _save_and_record(
+            img_arr, f"id_fake_{i:03d}.jpg", "FAKE", "id_manipulated", fmt="JPEG", quality=95
+        )
 
     # Category 3: Hard OOD - Anime / Cartoon
     for i in range(c_anime):
@@ -102,7 +116,9 @@ def generate_benchmark_dataset(
         g = rng.uniform(40, 90, (224, 224))
         b = rng.uniform(90, 160, (224, 224))
         img_arr = np.stack([r, g, b], axis=-1).clip(0, 255).astype(np.uint8)
-        _save_and_record(img_arr, f"ood_underwater_{i:03d}.jpg", "OOD", "ood_underwater", fmt="JPEG", quality=85)
+        _save_and_record(
+            img_arr, f"ood_underwater_{i:03d}.jpg", "OOD", "ood_underwater", fmt="JPEG", quality=85
+        )
 
     # Category 6: Hard OOD - Geometric / High Frequency Noise
     for i in range(c_noise):

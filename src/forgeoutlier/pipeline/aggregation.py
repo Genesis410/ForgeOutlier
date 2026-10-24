@@ -1,16 +1,17 @@
 """Video frame voting and aggregation rules."""
 
-from typing import List, Tuple, Dict, Any, Optional
-from forgeoutlier.core.types import Decision, VideoSummary
+from typing import Any
+
 from forgeoutlier.core.exceptions import InsufficientDataError
+from forgeoutlier.core.types import Decision, VideoSummary
 
 
 def aggregate_video_frames(
-    frame_predictions: List[Dict[str, Any]],
+    frame_predictions: list[dict[str, Any]],
     min_frames: int = 4,
     ood_ratio_threshold: float = 0.40,
     fake_ratio_threshold: float = 0.25,
-) -> Tuple[Decision, str, VideoSummary]:
+) -> tuple[Decision, str, VideoSummary]:
     """Aggregate individual frame predictions into video-level tri-state decision (D007).
 
     Rules:
@@ -38,8 +39,16 @@ def aggregate_video_frames(
         )
 
     ood_count = sum(1 for f in frame_predictions if f.get("is_outlier", False))
-    fake_count = sum(1 for f in frame_predictions if f.get("decision") == Decision.FAKE or f.get("decision") == "FAKE")
-    real_count = sum(1 for f in frame_predictions if f.get("decision") == Decision.REAL or f.get("decision") == "REAL")
+    fake_count = sum(
+        1
+        for f in frame_predictions
+        if f.get("decision") == Decision.FAKE or f.get("decision") == "FAKE"
+    )
+    real_count = sum(
+        1
+        for f in frame_predictions
+        if f.get("decision") == Decision.REAL or f.get("decision") == "REAL"
+    )
 
     r_ood = float(ood_count / m)
     r_fake = float(fake_count / m)

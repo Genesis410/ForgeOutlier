@@ -1,10 +1,11 @@
 """Unit and security tests for Layer 2B: media ingestion, decompression bomb defense, and frame extraction."""
 
 from pathlib import Path
+
 import cv2
 import numpy as np
-from PIL import Image
 import pytest
+from PIL import Image
 
 from forgeoutlier.core.exceptions import (
     CorruptedMediaError,
@@ -70,7 +71,9 @@ def test_extract_video_frames(tmp_path: Path) -> None:
     out.release()
 
     # Extract 5 uniform frames
-    frames, indices, meta = extract_video_frames(str(video_path), target_samples=5, target_size=(224, 224))
+    frames, indices, meta = extract_video_frames(
+        str(video_path), target_samples=5, target_size=(224, 224)
+    )
 
     assert frames.shape == (5, 3, 224, 224)
     assert len(indices) == 5

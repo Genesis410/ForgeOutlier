@@ -3,12 +3,12 @@
 import csv
 import json
 from pathlib import Path
-from typing import Any, Dict, List, Union
+from typing import Any
 
 from forgeoutlier.eval.benchmark import BenchmarkSummary
 
 
-def export_summary_json(summary: Union[BenchmarkSummary, Dict[str, Any]], output_path: str) -> None:
+def export_summary_json(summary: BenchmarkSummary | dict[str, Any], output_path: str) -> None:
     """Export benchmark summary metrics to formatted JSON."""
     data = summary.to_dict() if isinstance(summary, BenchmarkSummary) else summary
     p = Path(output_path)
@@ -18,7 +18,7 @@ def export_summary_json(summary: Union[BenchmarkSummary, Dict[str, Any]], output
 
 
 def export_confusion_matrix_csv(
-    confusion_matrix: Dict[str, Dict[str, int]],
+    confusion_matrix: dict[str, dict[str, int]],
     output_path: str,
 ) -> None:
     """Export Tri-State Confusion Matrix to standard tabular CSV."""
@@ -29,12 +29,14 @@ def export_confusion_matrix_csv(
     rows = []
     for gt in ["REAL", "FAKE", "OOD"]:
         counts = confusion_matrix.get(gt, {"REAL": 0, "FAKE": 0, "UNKNOWN": 0})
-        rows.append([
-            gt,
-            counts.get("REAL", 0),
-            counts.get("FAKE", 0),
-            counts.get("UNKNOWN", 0),
-        ])
+        rows.append(
+            [
+                gt,
+                counts.get("REAL", 0),
+                counts.get("FAKE", 0),
+                counts.get("UNKNOWN", 0),
+            ]
+        )
 
     with open(p, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
@@ -43,7 +45,7 @@ def export_confusion_matrix_csv(
 
 
 def export_predictions_csv(
-    predictions: List[Dict[str, Any]],
+    predictions: list[dict[str, Any]],
     output_path: str,
 ) -> None:
     """Export individual prediction rows to CSV."""

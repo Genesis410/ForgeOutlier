@@ -1,30 +1,29 @@
 """CLI command implementations and dispatching."""
 
 import json
-import os
 import sys
 from pathlib import Path
-from typing import Any, List, Optional
+from typing import Any
 
 import numpy as np
 
-from forgeoutlier.core.exceptions import ForgeOutlierException
-from forgeoutlier.core.types import Policy, Decision
-from forgeoutlier.models.loader import compute_file_sha256, load_checkpoint
-from forgeoutlier.ood.fitting import (
-    fit_centroid_and_covariance,
-    calibrate_quantile_threshold,
-)
-from forgeoutlier.ood.mahalanobis import MahalanobisScorer
-from forgeoutlier.ood.cosine import CosineCentroidScorer
-from forgeoutlier.ood.serialization import save_ood_artifact
 from forgeoutlier import load_pipeline
+from forgeoutlier.cli.formatters import format_box, format_json, format_tsv, format_tsv_header
 from forgeoutlier.cli.parser import build_parser
-from forgeoutlier.cli.formatters import format_json, format_tsv, format_tsv_header, format_box
 from forgeoutlier.cli.progress import StderrProgressBar
-from forgeoutlier.eval.benchmark import evaluate_dataset, BenchmarkSummary
+from forgeoutlier.core.exceptions import ForgeOutlierException
+from forgeoutlier.core.types import Decision, Policy
+from forgeoutlier.eval.benchmark import evaluate_dataset
 from forgeoutlier.media.image import load_image
 from forgeoutlier.media.video import VideoStream
+from forgeoutlier.models.loader import compute_file_sha256, load_checkpoint
+from forgeoutlier.ood.cosine import CosineCentroidScorer
+from forgeoutlier.ood.fitting import (
+    calibrate_quantile_threshold,
+    fit_centroid_and_covariance,
+)
+from forgeoutlier.ood.mahalanobis import MahalanobisScorer
+from forgeoutlier.ood.serialization import save_ood_artifact
 
 
 def handle_predict(args: Any) -> int:
@@ -95,7 +94,7 @@ def handle_batch_predict(args: Any) -> int:
         policy=pol,
     )
 
-    all_files: List[Path] = []
+    all_files: list[Path] = []
     for item in args.inputs:
         p = Path(item)
         if p.is_dir():
@@ -159,7 +158,9 @@ def handle_fit_ood(args: Any) -> int:
         scorer = CosineCentroidScorer(mu=mu, threshold=0.0)
 
     scores = scorer.score(embeddings)
-    threshold = calibrate_quantile_threshold(scores, percentile=args.quantile * 100.0 if args.quantile <= 1.0 else args.quantile)
+    threshold = calibrate_quantile_threshold(
+        scores, percentile=args.quantile * 100.0 if args.quantile <= 1.0 else args.quantile
+    )
 
     out_p = Path(args.output_path)
     sha256 = save_ood_artifact(
@@ -170,7 +171,9 @@ def handle_fit_ood(args: Any) -> int:
         cov=cov if args.method == "mahalanobis" else None,
     )
 
-    sys.stdout.write(f"OOD profile fitted successfully.\nMethod: {args.method}\nSamples: {len(embeddings)}\nThreshold ({args.quantile}): {threshold:.4f}\nSHA256: {sha256}\nOutput: {out_p}\n")
+    sys.stdout.write(
+        f"OOD profile fitted successfully.\nMethod: {args.method}\nSamples: {len(embeddings)}\nThreshold ({args.quantile}): {threshold:.4f}\nSHA256: {sha256}\nOutput: {out_p}\n"
+    )
     return 0
 
 
@@ -197,6 +200,7 @@ def handle_extract_embeddings(args: Any) -> int:
 
     if args.model_path is None:
         from forgeoutlier.models.model import DeepfakeModel
+
         model = DeepfakeModel()
     else:
         model = load_checkpoint(
@@ -207,7 +211,7 @@ def handle_extract_embeddings(args: Any) -> int:
         )
     model.eval()
 
-    embeddings_list: List[np.ndarray] = []
+    embeddings_list: list[np.ndarray] = []
     if input_p.is_file():
         suffix = input_p.suffix.lower()
         if suffix in (".mp4", ".avi", ".mov", ".mkv"):
@@ -246,7 +250,9 @@ def handle_extract_embeddings(args: Any) -> int:
     else:
         np.save(out_p, embs_array)
 
-    sys.stdout.write(f"Extracted {len(embs_array)} embeddings with shape {embs_array.shape} to {out_p}\n")
+    sys.stdout.write(
+        f"Extracted {len(embs_array)} embeddings with shape {embs_array.shape} to {out_p}\n"
+    )
     return 0
 
 
@@ -257,7 +263,7 @@ def handle_evaluate(args: Any) -> int:
         sys.stderr.write(f"Error: evaluation manifest does not exist: {manifest_p}\n")
         return 1
 
-    with open(manifest_p, "r", encoding="utf-8") as f:
+    with open(manifest_p, encoding="utf-8") as f:
         data = json.load(f)
 
     if not isinstance(data, list):
@@ -275,6 +281,7 @@ def handle_evaluate(args: Any) -> int:
         from forgeoutlier.models.model import DeepfakeModel
         from forgeoutlier.ood.mahalanobis import MahalanobisScorer
         from forgeoutlier.pipeline.inference import InferencePipeline
+
         model = DeepfakeModel()
         ood_scorer = MahalanobisScorer(
             mu=np.zeros(576, dtype=np.float32),
@@ -318,7 +325,7 @@ def handle_evaluate(args: Any) -> int:
     return 0
 
 
-def main(argv: Optional[List[str]] = None) -> int:
+def main(argv: list[str] | None = None) -> int:
     """Main CLI entrypoint."""
     parser = build_parser()
     args = parser.parse_args(argv)
@@ -343,11 +350,13 @@ def main(argv: Optional[List[str]] = None) -> int:
         sys.stderr.write(f"ForgeOutlier Error [{type(e).__name__}]: {e}\n")
         if args.debug:
             import traceback
+
             traceback.print_exc(file=sys.stderr)
         return 1
     except Exception as e:
         sys.stderr.write(f"System Error: {e}\n")
         if args.debug:
             import traceback
+
             traceback.print_exc(file=sys.stderr)
         return 1

@@ -2,7 +2,7 @@
 
 from dataclasses import asdict, dataclass
 from enum import Enum
-from typing import Any, Dict, List, Optional
+from typing import Any
 
 
 class Decision(str, Enum):
@@ -27,11 +27,11 @@ class MediaMeta:
 
     path: str
     media_type: str  # "image" or "video"
-    dimensions: List[int]  # [height, width]
-    duration_seconds: Optional[float] = None
-    total_frames_sampled: Optional[int] = None
+    dimensions: list[int]  # [height, width]
+    duration_seconds: float | None = None
+    total_frames_sampled: int | None = None
 
-    def to_dict(self) -> Dict[str, Any]:
+    def to_dict(self) -> dict[str, Any]:
         return asdict(self)
 
 
@@ -45,7 +45,7 @@ class ScoreResult:
     is_outlier: bool
     threshold: float
 
-    def to_dict(self) -> Dict[str, Any]:
+    def to_dict(self) -> dict[str, Any]:
         return asdict(self)
 
 
@@ -57,9 +57,9 @@ class VideoSummary:
     ood_frame_ratio: float
     fake_frame_ratio: float
     real_frame_ratio: float
-    frame_details: Optional[List[Dict[str, Any]]] = None
+    frame_details: list[dict[str, Any]] | None = None
 
-    def to_dict(self) -> Dict[str, Any]:
+    def to_dict(self) -> dict[str, Any]:
         return asdict(self)
 
 
@@ -74,9 +74,9 @@ class PredictionResult:
     scores: ScoreResult
     status: str = "SUCCESS"
     schema_version: str = "1.0.0"
-    video_summary: Optional[VideoSummary] = None
+    video_summary: VideoSummary | None = None
 
-    def to_dict(self) -> Dict[str, Any]:
+    def to_dict(self) -> dict[str, Any]:
         return {
             "schema_version": self.schema_version,
             "status": self.status,

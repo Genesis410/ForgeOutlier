@@ -1,17 +1,17 @@
 """Unit tests for models, backbone, and secure checkpoint loader."""
 
-from pathlib import Path
 import json
-import pytest
+
 import numpy as np
+import pytest
 import torch
 
+from forgeoutlier.core.exceptions import ExecutionFailureError, SecurityIntegrityError
 from forgeoutlier.core.protocols import EncoderProtocol
-from forgeoutlier.core.exceptions import SecurityIntegrityError, ExecutionFailureError
 from forgeoutlier.models.backbone import MobileNetV3SmallBackbone
 from forgeoutlier.models.classifier import BinaryClassifierHead
+from forgeoutlier.models.loader import compute_file_sha256, load_checkpoint
 from forgeoutlier.models.model import DeepfakeModel
-from forgeoutlier.models.loader import load_checkpoint, compute_file_sha256
 
 
 def test_backbone_feature_dim_and_forward():
@@ -105,9 +105,7 @@ def test_secure_loader_and_manifest_verification(tmp_path):
 
     # 4. Tampered manifest / mismatched hash should raise SecurityIntegrityError
     tampered_manifest = tmp_path / "tampered_manifest.json"
-    tampered_manifest.write_text(
-        json.dumps({"model": {"sha256": "0" * 64}}), encoding="utf-8"
-    )
+    tampered_manifest.write_text(json.dumps({"model": {"sha256": "0" * 64}}), encoding="utf-8")
     with pytest.raises(SecurityIntegrityError, match="SHA-256 verification failed"):
         load_checkpoint(ckpt_path, manifest_path=tampered_manifest, verify_hash=True)
 

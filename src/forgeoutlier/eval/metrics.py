@@ -4,14 +4,13 @@ Provides pure-NumPy implementations for AUROC, AUPRC, FPR@95% TPR,
 and Tri-State Confusion Matrix for open-set triage evaluation.
 """
 
-from typing import Dict, List, Tuple, Union
 import numpy as np
 
 
 def compute_roc_curve(
     y_true: np.ndarray,
     scores: np.ndarray,
-) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
+) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
     """Compute Receiver Operating Characteristic (ROC) curve.
 
     Args:
@@ -69,7 +68,7 @@ def compute_auroc(y_true: np.ndarray, scores: np.ndarray) -> float:
 def compute_pr_curve(
     y_true: np.ndarray,
     scores: np.ndarray,
-) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
+) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
     """Compute Precision-Recall curve."""
     y_true = np.asarray(y_true, dtype=int)
     scores = np.asarray(scores, dtype=float)
@@ -140,7 +139,7 @@ def compute_auprc(y_true: np.ndarray, scores: np.ndarray) -> float:
 def compute_risk_coverage(
     risk_errors: np.ndarray,
     confidence_scores: np.ndarray,
-) -> Tuple[np.ndarray, np.ndarray, float]:
+) -> tuple[np.ndarray, np.ndarray, float]:
     """Compute Selective Classification Risk-Coverage Curve and AURC.
 
     Args:
@@ -228,9 +227,9 @@ def compute_ece(
 
 
 def compute_tristate_confusion_matrix(
-    y_true_labels: List[str],
-    decisions: List[str],
-) -> Dict[str, Dict[str, int]]:
+    y_true_labels: list[str],
+    decisions: list[str],
+) -> dict[str, dict[str, int]]:
     """Compute 2x3 Tri-State Confusion Matrix.
 
     Rows: Ground Truth ('REAL', 'FAKE', or 'OOD' / 'UNKNOWN')
@@ -244,13 +243,13 @@ def compute_tristate_confusion_matrix(
             "OOD":  {"REAL": c7, "FAKE": c8, "UNKNOWN": c9},
         }
     """
-    matrix: Dict[str, Dict[str, int]] = {
+    matrix: dict[str, dict[str, int]] = {
         "REAL": {"REAL": 0, "FAKE": 0, "UNKNOWN": 0},
         "FAKE": {"REAL": 0, "FAKE": 0, "UNKNOWN": 0},
         "OOD": {"REAL": 0, "FAKE": 0, "UNKNOWN": 0},
     }
 
-    for gt, pred in zip(y_true_labels, decisions):
+    for gt, pred in zip(y_true_labels, decisions, strict=False):
         gt_norm = str(gt).upper()
         pred_norm = str(pred).upper()
         if gt_norm not in matrix:

@@ -1,6 +1,7 @@
 """Architectural protocols defining structural contracts between layers."""
 
-from typing import Protocol, Tuple, runtime_checkable
+from typing import Protocol, runtime_checkable
+
 import numpy as np
 
 
@@ -56,7 +57,7 @@ class OODScorerProtocol(Protocol):
         """
         ...
 
-    def is_outlier(self, embeddings: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
+    def is_outlier(self, embeddings: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
         """Determine if embeddings are OOD against calibrated threshold.
 
         Args:

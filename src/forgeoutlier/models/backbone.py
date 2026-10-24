@@ -1,11 +1,7 @@
 """Feature extraction backbone architectures."""
 
-from typing import Union
 import torch
 import torch.nn as nn
-import numpy as np
-from forgeoutlier.core.exceptions import NumericalInstabilityError
-from forgeoutlier.core.config import NUMERICAL_CONSTANTS
 
 
 class SqueezeExcitation(nn.Module):

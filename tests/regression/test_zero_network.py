@@ -1,21 +1,24 @@
 """Regression test: Enforce absolute zero network connectivity during inference."""
 
 import socket
+
+import numpy as np
 import pytest
 from PIL import Image
-import torch
-import numpy as np
 
 from forgeoutlier.models.model import DeepfakeModel
-from forgeoutlier.pipeline.inference import InferencePipeline
 from forgeoutlier.ood.cosine import CosineCentroidScorer
+from forgeoutlier.pipeline.inference import InferencePipeline
 
 
 @pytest.fixture(autouse=True)
 def block_network(monkeypatch: pytest.MonkeyPatch) -> None:
     """Monkeypatch socket.socket to forbid any outgoing network calls."""
+
     def guarded_socket(*args, **kwargs):
-        raise RuntimeError("CRITICAL SECURITY VIOLATION: Network socket access detected in offline pipeline!")
+        raise RuntimeError(
+            "CRITICAL SECURITY VIOLATION: Network socket access detected in offline pipeline!"
+        )
 
     monkeypatch.setattr(socket, "socket", guarded_socket)
 

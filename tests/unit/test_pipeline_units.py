@@ -1,10 +1,11 @@
 """Unit tests for Phase 4: Tri-state triage policies and video aggregation."""
 
 import pytest
-from forgeoutlier.core.types import Decision, Policy, VideoSummary
+
 from forgeoutlier.core.exceptions import InsufficientDataError
-from forgeoutlier.pipeline.decisions import evaluate_decision
+from forgeoutlier.core.types import Decision, Policy
 from forgeoutlier.pipeline.aggregation import aggregate_video_frames
+from forgeoutlier.pipeline.decisions import evaluate_decision
 
 
 def test_decision_outlier_first() -> None:

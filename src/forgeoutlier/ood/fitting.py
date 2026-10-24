@@ -1,6 +1,5 @@
 """Statistical fitting, L2-normalization, Ledoit-Wolf covariance estimation, and quantile calibration."""
 
-from typing import Tuple
 import numpy as np
 
 from forgeoutlier.core.config import NUMERICAL_CONSTANTS
@@ -34,7 +33,7 @@ def normalize_l2(x: np.ndarray, eps: float = NUMERICAL_CONSTANTS.eps) -> np.ndar
 
 def fit_centroid_and_covariance(
     embeddings: np.ndarray,
-) -> Tuple[np.ndarray, np.ndarray, float]:
+) -> tuple[np.ndarray, np.ndarray, float]:
     """Calculate mean centroid and well-conditioned covariance matrix via Ledoit-Wolf shrinkage.
 
     Args:
@@ -70,19 +69,23 @@ def fit_centroid_and_covariance(
         emp_cov = (X_centered.T @ X_centered) / n_samples
         mu_trace = float(np.trace(emp_cov) / n_features)
 
-        X2 = X_centered ** 2
+        X2 = X_centered**2
         xt_x = X_centered.T @ X_centered
-        delta_ = float(np.sum(xt_x ** 2) / (n_samples ** 2))
+        delta_ = float(np.sum(xt_x**2) / (n_samples**2))
         beta_ = float(np.sum(X2.T @ X2))
 
         beta = (1.0 / (n_features * n_samples)) * ((beta_ / n_samples) - delta_)
         emp_cov_trace_sum = float(np.sum(np.diag(emp_cov)))
-        delta = delta_ - 2.0 * mu_trace * emp_cov_trace_sum + n_features * (mu_trace ** 2)
+        delta = delta_ - 2.0 * mu_trace * emp_cov_trace_sum + n_features * (mu_trace**2)
         delta /= n_features
 
         beta = min(beta, delta)
-        shrinkage = 0.0 if (delta == 0.0 or beta == 0.0) else max(0.0, min(1.0, float(beta / delta)))
-        shrunk_cov = (1.0 - shrinkage) * emp_cov + shrinkage * mu_trace * np.eye(n_features, dtype=np.float64)
+        shrinkage = (
+            0.0 if (delta == 0.0 or beta == 0.0) else max(0.0, min(1.0, float(beta / delta)))
+        )
+        shrunk_cov = (1.0 - shrinkage) * emp_cov + shrinkage * mu_trace * np.eye(
+            n_features, dtype=np.float64
+        )
         cov = shrunk_cov.astype(np.float32)
     except Exception as exc:
         raise NumericalInstabilityError(f"Ledoit-Wolf covariance estimation failed: {exc}") from exc

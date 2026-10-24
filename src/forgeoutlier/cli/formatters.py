@@ -1,8 +1,6 @@
 """Formatters for CLI output (JSON, TSV, ANSI Box)."""
 
 import json
-import sys
-from typing import Any, Dict
 
 from forgeoutlier.core.types import PredictionResult
 
@@ -33,30 +31,28 @@ def format_tsv(result: PredictionResult) -> str:
 
 def format_box(result: PredictionResult, use_color: bool = True) -> str:
     """Format PredictionResult in interactive ANSI Box format."""
-    # Color codes
+    decision_str = result.decision.value
     if use_color:
         c_green = "\033[92m"
         c_red = "\033[91m"
         c_yellow = "\033[93m"
         c_bold = "\033[1m"
         c_reset = "\033[0m"
+        if decision_str == "REAL":
+            display_decision = f"{c_green}{c_bold}REAL{c_reset}"
+        elif decision_str == "FAKE":
+            display_decision = f"{c_red}{c_bold}FAKE{c_reset}"
+        else:
+            display_decision = f"{c_yellow}{c_bold}UNKNOWN (OOD){c_reset}"
     else:
-        c_green = c_red = c_yellow = c_bold = c_reset = ""
-
-    decision_str = result.decision.value
-    if decision_str == "REAL":
-        colored_dec = f"{c_green}{c_bold}REAL{c_reset}"
-    elif decision_str == "FAKE":
-        colored_dec = f"{c_red}{c_bold}FAKE{c_reset}"
-    else:
-        colored_dec = f"{c_yellow}{c_bold}UNKNOWN (OOD){c_reset}"
+        display_decision = decision_str
 
     lines = [
         "┌────────────────────────────────────────────────────────────┐",
         f"│ MEDIA: {str(result.media.path):<51} │",
         f"│ TYPE:  {str(result.media.media_type):<51} │",
         "├────────────────────────────────────────────────────────────┤",
-        f"│ DECISION:   {decision_str:<46} │",
+        f"│ DECISION:   {display_decision:<46} │",
         f"│ REASON:     {str(result.reason):<46} │",
         f"│ PROB_FAKE:  {result.scores.prob_fake:<46.4f} │",
         f"│ PROB_REAL:  {result.scores.prob_real:<46.4f} │",

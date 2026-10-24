@@ -1,6 +1,8 @@
 """Tests for core module: types, exceptions, protocols, and security."""
 
+from dataclasses import FrozenInstanceError
 from pathlib import Path
+
 import numpy as np
 import pytest
 
@@ -16,11 +18,6 @@ from forgeoutlier.core.exceptions import (
 from forgeoutlier.core.protocols import EncoderProtocol, OODScorerProtocol
 from forgeoutlier.core.security import sanitize_input_path
 from forgeoutlier.core.types import (
-    Decision,
-    MediaMeta,
-    Policy,
-    PredictionResult,
-    ScoreResult,
     VideoSummary,
 )
 
@@ -46,7 +43,7 @@ def test_config_immutability() -> None:
     assert MEDIA_LIMITS.max_image_dim == 4096
     assert MEDIA_LIMITS.max_image_bytes == 50 * 1024 * 1024
     assert NUMERICAL_CONSTANTS.eps == 1e-12
-    with pytest.raises(Exception):
+    with pytest.raises(FrozenInstanceError):
         MEDIA_LIMITS.max_image_dim = 2048  # type: ignore
 
 

@@ -2,31 +2,32 @@
 
 import json
 from pathlib import Path
+
 import numpy as np
 import pytest
+import torch
 from PIL import Image
 
+from forgeoutlier import (
+    Policy,
+    load_pipeline,
+)
 from forgeoutlier.eval import (
-    compute_roc_curve,
-    compute_pr_curve,
-    compute_auroc,
-    compute_auprc,
-    compute_fpr_at_tpr,
-    compute_tristate_confusion_matrix,
     BenchmarkSummary,
+    compute_auprc,
+    compute_auroc,
+    compute_fpr_at_tpr,
+    compute_pr_curve,
+    compute_roc_curve,
+    compute_tristate_confusion_matrix,
     evaluate_dataset,
-    export_summary_json,
     export_confusion_matrix_csv,
     export_predictions_csv,
+    export_summary_json,
 )
-from forgeoutlier import (
-    load_pipeline,
-    Policy,
-)
-from forgeoutlier.models.model import DeepfakeModel
 from forgeoutlier.models.loader import compute_file_sha256
+from forgeoutlier.models.model import DeepfakeModel
 from forgeoutlier.ood.serialization import save_ood_artifact
-import torch
 
 
 def test_metrics_curves_and_scalars() -> None:
@@ -85,6 +86,7 @@ def test_tristate_confusion_matrix() -> None:
 
 def test_compute_risk_coverage() -> None:
     from forgeoutlier.eval.metrics import compute_risk_coverage
+
     errors = np.array([0, 0, 1, 0, 1])
     confs = np.array([0.9, 0.8, 0.7, 0.6, 0.5])
     cov, risk, aurc = compute_risk_coverage(errors, confs)
@@ -150,7 +152,7 @@ def test_benchmark_evaluate_and_exports(tmp_path: Path) -> None:
     json_out = tmp_path / "summary.json"
     export_summary_json(summary, str(json_out))
     assert json_out.exists()
-    with open(json_out, "r", encoding="utf-8") as f:
+    with open(json_out, encoding="utf-8") as f:
         loaded_json = json.load(f)
         assert loaded_json["total_samples"] == 2
 
@@ -160,8 +162,26 @@ def test_benchmark_evaluate_and_exports(tmp_path: Path) -> None:
 
     csv_pred_out = tmp_path / "predictions.csv"
     preds = [
-        {"path": str(img1), "decision": "REAL", "reason": "CONFIDENT", "prob_fake": 0.1, "prob_real": 0.9, "ood_score": 0.2, "is_outlier": False, "threshold": 0.5},
-        {"path": str(img2), "decision": "UNKNOWN", "reason": "OOD", "prob_fake": 0.1, "prob_real": 0.9, "ood_score": 0.8, "is_outlier": True, "threshold": 0.5},
+        {
+            "path": str(img1),
+            "decision": "REAL",
+            "reason": "CONFIDENT",
+            "prob_fake": 0.1,
+            "prob_real": 0.9,
+            "ood_score": 0.2,
+            "is_outlier": False,
+            "threshold": 0.5,
+        },
+        {
+            "path": str(img2),
+            "decision": "UNKNOWN",
+            "reason": "OOD",
+            "prob_fake": 0.1,
+            "prob_real": 0.9,
+            "ood_score": 0.8,
+            "is_outlier": True,
+            "threshold": 0.5,
+        },
     ]
     export_predictions_csv(preds, str(csv_pred_out))
     assert csv_pred_out.exists()

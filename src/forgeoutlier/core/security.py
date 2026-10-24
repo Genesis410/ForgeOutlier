@@ -1,14 +1,13 @@
 """Path sanitization and security boundary validation utilities."""
 
-import os
 from pathlib import Path
-from typing import Optional
+
 from forgeoutlier.core.exceptions import SecurityIntegrityError
 
 
 def sanitize_input_path(
     user_path: str,
-    base_dir: Optional[str] = None,
+    base_dir: str | None = None,
     allow_absolute: bool = True,
 ) -> Path:
     """Validate and sanitize an input file path against directory traversal and symlink escapes.
@@ -37,9 +36,9 @@ def sanitize_input_path(
         resolved_base = Path(base_dir).resolve()
         try:
             resolved_path.relative_to(resolved_base)
-        except ValueError:
+        except ValueError as err:
             raise SecurityIntegrityError(
                 f"Path traversal detected: '{user_path}' resolves outside allowed directory."
-            )
+            ) from err
 
     return resolved_path

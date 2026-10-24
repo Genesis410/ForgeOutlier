@@ -1,7 +1,7 @@
 """Image ingestion, Pillow decompression-bomb defense, EXIF orientation handling, and tensor conversion."""
 
 from pathlib import Path
-from typing import Tuple, Union
+
 import numpy as np
 from PIL import Image, ImageOps
 
@@ -18,9 +18,9 @@ Image.MAX_IMAGE_PIXELS = MEDIA_LIMITS.max_image_pixels
 
 
 def load_image(
-    source: Union[str, Path, Image.Image, np.ndarray],
-    target_size: Tuple[int, int] = (224, 224),
-) -> Tuple[np.ndarray, MediaMeta]:
+    source: str | Path | Image.Image | np.ndarray,
+    target_size: tuple[int, int] = (224, 224),
+) -> tuple[np.ndarray, MediaMeta]:
     """Load, sanitize, auto-orient, resize, and convert image to RGB float32 tensor array.
 
     Args:
@@ -60,7 +60,9 @@ def load_image(
         except Image.DecompressionBombError as exc:
             raise ResourceLimitExceededError(f"Decompression bomb detected: {exc}") from exc
         except Exception as exc:
-            raise CorruptedMediaError(f"Failed to decode image {resolved_path.name}: {exc}") from exc
+            raise CorruptedMediaError(
+                f"Failed to decode image {resolved_path.name}: {exc}"
+            ) from exc
 
     elif isinstance(source, Image.Image):
         img = source.copy()

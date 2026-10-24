@@ -1,6 +1,7 @@
 """Optional face detection and bounding box cropping hook with Haar cascades / OpenCV."""
 
-from typing import Callable, Optional, Tuple
+from collections.abc import Callable
+
 import cv2
 import numpy as np
 from PIL import Image
@@ -10,10 +11,10 @@ from forgeoutlier.core.exceptions import CorruptedMediaError, ExecutionFailureEr
 
 def crop_face(
     image: np.ndarray,
-    target_size: Tuple[int, int] = (224, 224),
+    target_size: tuple[int, int] = (224, 224),
     margin_ratio: float = 0.2,
-    detector_fn: Optional[Callable[[np.ndarray], Optional[Tuple[int, int, int, int]]]] = None,
-) -> Tuple[np.ndarray, Tuple[int, int, int, int]]:
+    detector_fn: Callable[[np.ndarray], tuple[int, int, int, int] | None] | None = None,
+) -> tuple[np.ndarray, tuple[int, int, int, int]]:
     """Detect primary face and crop with bounding margin.
 
     Args:
@@ -43,13 +44,17 @@ def crop_face(
     else:
         uint8_img = image.astype(np.uint8)
 
-    bbox: Optional[Tuple[int, int, int, int]] = None
+    bbox: tuple[int, int, int, int] | None = None
 
     if detector_fn is not None:
         bbox = detector_fn(uint8_img)
     else:
         # Fallback to Haar cascade if cv2 exposes it
-        if hasattr(cv2, "CascadeClassifier") and hasattr(cv2, "data") and hasattr(cv2.data, "haarcascades"):
+        if (
+            hasattr(cv2, "CascadeClassifier")
+            and hasattr(cv2, "data")
+            and hasattr(cv2.data, "haarcascades")
+        ):
             try:
                 cascade_path = cv2.data.haarcascades + "haarcascade_frontalface_default.xml"
                 face_cascade = cv2.CascadeClassifier(cascade_path)

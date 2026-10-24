@@ -1,11 +1,11 @@
 """Adversarial testing: Path traversal, symlink escapes, and URI sanitation."""
 
-import os
 from pathlib import Path
+
 import pytest
 
-from forgeoutlier.core.security import sanitize_input_path
 from forgeoutlier.core.exceptions import SecurityIntegrityError
+from forgeoutlier.core.security import sanitize_input_path
 
 
 def test_path_traversal_dots(tmp_path: Path) -> None:
@@ -18,7 +18,7 @@ def test_path_traversal_dots(tmp_path: Path) -> None:
 
     # In strict sandbox mode, escaping directory raises SecurityIntegrityError
     with pytest.raises(SecurityIntegrityError):
-        sanitize_input_path(f"../../../outside.txt", base_dir=str(sub_dir), allow_absolute=False)
+        sanitize_input_path("../../../outside.txt", base_dir=str(sub_dir), allow_absolute=False)
 
 
 def test_null_byte_injection(tmp_path: Path) -> None:

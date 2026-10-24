@@ -1,17 +1,17 @@
 """Secure checkpoint loading and integrity verification."""
 
-from pathlib import Path
-from typing import Dict, Any, Optional, Union
-import json
 import hashlib
+import json
+from pathlib import Path
+
 import torch
 
+from forgeoutlier.core.exceptions import ExecutionFailureError, SecurityIntegrityError
 from forgeoutlier.core.security import sanitize_input_path
-from forgeoutlier.core.exceptions import SecurityIntegrityError, ExecutionFailureError
 from forgeoutlier.models.model import DeepfakeModel
 
 
-def compute_file_sha256(path: Union[str, Path]) -> str:
+def compute_file_sha256(path: str | Path) -> str:
     """Compute SHA-256 hash of a file."""
     h = hashlib.sha256()
     with open(path, "rb") as f:
@@ -21,8 +21,8 @@ def compute_file_sha256(path: Union[str, Path]) -> str:
 
 
 def load_checkpoint(
-    checkpoint_path: Union[str, Path],
-    manifest_path: Optional[Union[str, Path]] = None,
+    checkpoint_path: str | Path,
+    manifest_path: str | Path | None = None,
     verify_hash: bool = True,
     device: str = "cpu",
     feature_dim: int = 576,
@@ -58,7 +58,9 @@ def load_checkpoint(
             manifest_candidates = [
                 clean_path.parent / "trusted_checkpoints.json",
                 clean_path.parent / "manifests" / "trusted_checkpoints.json",
-                Path(__file__).resolve().parent.parent.parent / "manifests" / "trusted_checkpoints.json",
+                Path(__file__).resolve().parent.parent.parent
+                / "manifests"
+                / "trusted_checkpoints.json",
                 Path.cwd() / "manifests" / "trusted_checkpoints.json",
             ]
             manifest_file = None
@@ -77,7 +79,7 @@ def load_checkpoint(
                 raise SecurityIntegrityError(f"Manifest file not found: {manifest_file}")
 
         try:
-            with open(manifest_file, "r", encoding="utf-8") as f:
+            with open(manifest_file, encoding="utf-8") as f:
                 manifest_data = json.load(f)
         except Exception as e:
             raise SecurityIntegrityError(f"Failed to read trusted manifest: {e}") from e
@@ -120,7 +122,9 @@ def load_checkpoint(
         raise SecurityIntegrityError(f"Checkpoint deserialization failed: {e}") from e
 
     if not isinstance(state_dict, dict):
-        raise SecurityIntegrityError(f"Expected state_dict dictionary, got {type(state_dict).__name__}")
+        raise SecurityIntegrityError(
+            f"Expected state_dict dictionary, got {type(state_dict).__name__}"
+        )
 
     # Build model and load state_dict
     model = DeepfakeModel(feature_dim=feature_dim)

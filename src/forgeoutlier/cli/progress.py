@@ -1,7 +1,8 @@
 """Terminal progress indicator writing solely to stderr."""
 
 import sys
-from typing import Iterable, TypeVar
+from collections.abc import Iterable
+from typing import TypeVar
 
 T = TypeVar("T")
 
@@ -22,7 +23,9 @@ class StderrProgressBar:
             percent = (self.current / self.total) * 100
             filled = int(self.length * self.current // self.total)
             bar = "=" * filled + "-" * (self.length - filled)
-            sys.stderr.write(f"\r{self.prefix} [{bar}] {self.current}/{self.total} ({percent:.1f}%)")
+            sys.stderr.write(
+                f"\r{self.prefix} [{bar}] {self.current}/{self.total} ({percent:.1f}%)"
+            )
             sys.stderr.flush()
 
     def finish(self) -> None:

@@ -1,6 +1,5 @@
 """Tri-state decision triage policies."""
 
-from typing import Tuple
 from forgeoutlier.core.types import Decision, Policy
 
 
@@ -10,7 +9,7 @@ def evaluate_decision(
     threshold: float,
     policy: Policy = Policy.OUTLIER_FIRST,
     clf_threshold: float = 0.50,
-) -> Tuple[Decision, str]:
+) -> tuple[Decision, str]:
     """Evaluate tri-state decision (REAL, FAKE, UNKNOWN) based on policy.
 
     Args:

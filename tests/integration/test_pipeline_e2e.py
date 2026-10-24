@@ -2,22 +2,21 @@
 
 import json
 from pathlib import Path
-import numpy as np
+
 import cv2
-import pytest
+import numpy as np
+import torch
 from PIL import Image
 
 from forgeoutlier import (
-    load_pipeline,
     Decision,
     Policy,
     PredictionResult,
+    load_pipeline,
 )
-from forgeoutlier.core.exceptions import CorruptedMediaError, SecurityIntegrityError
-from forgeoutlier.models.model import DeepfakeModel
 from forgeoutlier.models.loader import compute_file_sha256
+from forgeoutlier.models.model import DeepfakeModel
 from forgeoutlier.ood.serialization import save_ood_artifact
-import torch
 
 
 def create_synthetic_assets(

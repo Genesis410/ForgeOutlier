@@ -1,10 +1,8 @@
 """Numerically stable Mahalanobis distance scoring via Cholesky decomposition."""
 
-from typing import Tuple
 import numpy as np
 import scipy.linalg
 
-from forgeoutlier.core.config import NUMERICAL_CONSTANTS
 from forgeoutlier.core.exceptions import NumericalInstabilityError
 from forgeoutlier.core.protocols import OODScorerProtocol
 
@@ -101,7 +99,7 @@ class MahalanobisScorer(OODScorerProtocol):
 
         return distances[0:1] if single_sample else distances
 
-    def is_outlier(self, embeddings: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
+    def is_outlier(self, embeddings: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
         """Determine outlier status based on calibrated threshold."""
         scores = self.score(embeddings)
         outlier_flags = scores > self._threshold

@@ -2,7 +2,8 @@
 
 import hashlib
 from pathlib import Path
-from typing import Any, Dict, Tuple
+from typing import Any
+
 import numpy as np
 
 from forgeoutlier.core.exceptions import ExecutionFailureError, SecurityIntegrityError
@@ -25,7 +26,7 @@ def save_ood_artifact(
     mu: np.ndarray,
     threshold: float,
     cov: np.ndarray = None,
-    extra_meta: Dict[str, Any] = None,
+    extra_meta: dict[str, Any] = None,
 ) -> str:
     """Save OOD parameters to a compressed .npz archive without pickle.
 
@@ -43,7 +44,7 @@ def save_ood_artifact(
     path = Path(file_path).resolve()
     path.parent.mkdir(parents=True, exist_ok=True)
 
-    data: Dict[str, Any] = {
+    data: dict[str, Any] = {
         "method": np.array(method),
         "mu": np.asarray(mu, dtype=np.float32),
         "threshold": np.array(threshold, dtype=np.float64),
@@ -95,7 +96,9 @@ def load_ood_artifact(
 
             if method == "mahalanobis":
                 if "cov" not in npz:
-                    raise SecurityIntegrityError("Corrupted Mahalanobis artifact: missing 'cov' array.")
+                    raise SecurityIntegrityError(
+                        "Corrupted Mahalanobis artifact: missing 'cov' array."
+                    )
                 cov = npz["cov"]
                 return MahalanobisScorer(mu=mu, cov=cov, threshold=threshold)
             elif method == "cosine":

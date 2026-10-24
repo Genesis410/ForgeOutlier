@@ -1,25 +1,24 @@
 """End-to-end inference pipeline for image and video deepfake triage."""
 
 from pathlib import Path
-from typing import Union, Optional, List, Dict, Any
+from typing import Any
+
 import numpy as np
 from PIL import Image
 
-from forgeoutlier.core.types import (
-    Decision,
-    Policy,
-    MediaMeta,
-    ScoreResult,
-    PredictionResult,
-    VideoSummary,
-)
-from forgeoutlier.core.protocols import EncoderProtocol, OODScorerProtocol
 from forgeoutlier.core.exceptions import CorruptedMediaError, ExecutionFailureError
+from forgeoutlier.core.protocols import EncoderProtocol, OODScorerProtocol
+from forgeoutlier.core.types import (
+    MediaMeta,
+    Policy,
+    PredictionResult,
+    ScoreResult,
+)
 from forgeoutlier.media.image import load_image
 from forgeoutlier.media.video import VideoStream
 from forgeoutlier.ood.fitting import normalize_l2
-from forgeoutlier.pipeline.decisions import evaluate_decision
 from forgeoutlier.pipeline.aggregation import aggregate_video_frames
+from forgeoutlier.pipeline.decisions import evaluate_decision
 
 # ImageNet normalization statistics
 IMAGENET_MEAN = np.array([0.485, 0.456, 0.406], dtype=np.float32).reshape(3, 1, 1)
@@ -48,9 +47,7 @@ class InferencePipeline:
         self.policy = policy
         self.clf_threshold = clf_threshold
 
-    def _process_single_frame(
-        self, chw_array: np.ndarray
-    ) -> Dict[str, Any]:
+    def _process_single_frame(self, chw_array: np.ndarray) -> dict[str, Any]:
         """Run single (3, H, W) frame through model and scorer.
 
         Returns dict with:
@@ -97,7 +94,7 @@ class InferencePipeline:
 
     def predict_image(
         self,
-        source: Union[str, Path, Image.Image, np.ndarray],
+        source: str | Path | Image.Image | np.ndarray,
     ) -> PredictionResult:
         """Run triage on a single image.
 
@@ -131,7 +128,7 @@ class InferencePipeline:
 
     def predict_video(
         self,
-        video_path: Union[str, Path],
+        video_path: str | Path,
         target_samples: int = 16,
     ) -> PredictionResult:
         """Run triage on a video using bounded frame streaming and voting.
@@ -143,22 +140,24 @@ class InferencePipeline:
         Returns:
             PredictionResult dataclass with video_summary.
         """
-        frame_preds: List[Dict[str, Any]] = []
-        meta: Optional[MediaMeta] = None
+        frame_preds: list[dict[str, Any]] = []
+        meta: MediaMeta | None = None
 
         with VideoStream(str(video_path), target_samples=target_samples) as stream:
             meta = stream.meta
             for frame_idx, chw_tensor in stream.frames():
                 f_res = self._process_single_frame(chw_tensor)
-                frame_preds.append({
-                    "frame_index": frame_idx,
-                    "prob_fake": f_res["prob_fake"],
-                    "prob_real": f_res["prob_real"],
-                    "ood_score": f_res["ood_score"],
-                    "is_outlier": f_res["is_outlier"],
-                    "decision": f_res["decision"],
-                    "reason": f_res["reason"],
-                })
+                frame_preds.append(
+                    {
+                        "frame_index": frame_idx,
+                        "prob_fake": f_res["prob_fake"],
+                        "prob_real": f_res["prob_real"],
+                        "ood_score": f_res["ood_score"],
+                        "is_outlier": f_res["is_outlier"],
+                        "decision": f_res["decision"],
+                        "reason": f_res["reason"],
+                    }
+                )
 
         if meta is None or not frame_preds:
             raise CorruptedMediaError("No valid frames could be decoded from video stream.")

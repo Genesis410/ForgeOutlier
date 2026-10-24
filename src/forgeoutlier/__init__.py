@@ -1,7 +1,6 @@
 """ForgeOutlier Lite: Open-Set Deepfake Detection Library."""
 
 from pathlib import Path
-from typing import Union, Optional
 
 from forgeoutlier.core.types import Decision, Policy, PredictionResult
 from forgeoutlier.models.loader import load_checkpoint
@@ -12,10 +11,10 @@ __version__ = "1.2.0"
 
 
 def load_pipeline(
-    checkpoint_path: Union[str, Path],
-    ood_profile_path: Union[str, Path],
-    manifest_path: Optional[Union[str, Path]] = None,
-    ood_expected_sha256: Optional[str] = None,
+    checkpoint_path: str | Path,
+    ood_profile_path: str | Path,
+    manifest_path: str | Path | None = None,
+    ood_expected_sha256: str | None = None,
     policy: Policy = Policy.OUTLIER_FIRST,
     clf_threshold: float = 0.50,
     device: str = "cpu",

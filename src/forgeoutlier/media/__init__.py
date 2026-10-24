@@ -10,5 +10,3 @@ __all__ = [
     "crop_face",
     "VideoStream",
 ]
-
-

@@ -1,19 +1,17 @@
 """CLI unit and functional tests."""
 
-import io
 import json
 from pathlib import Path
+
 import numpy as np
 import pytest
-from PIL import Image
 import torch
+from PIL import Image
 
 from forgeoutlier.cli.commands import main
 from forgeoutlier.cli.parser import build_parser
-from forgeoutlier.cli.formatters import format_json, format_tsv, format_box
-from forgeoutlier.cli.progress import StderrProgressBar
-from forgeoutlier.models.model import DeepfakeModel
 from forgeoutlier.models.loader import compute_file_sha256
+from forgeoutlier.models.model import DeepfakeModel
 from forgeoutlier.ood.serialization import save_ood_artifact
 
 
@@ -45,20 +43,28 @@ def test_cli_fit_ood(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -> None
     np.save(str(emb_path), data)
 
     out_path = tmp_path / "profile.npz"
-    exit_code = main([
-        "fit-ood",
-        "--embeddings-path", str(emb_path),
-        "--output-path", str(out_path),
-        "--method", "cosine",
-        "--quantile", "0.90",
-    ])
+    exit_code = main(
+        [
+            "fit-ood",
+            "--embeddings-path",
+            str(emb_path),
+            "--output-path",
+            str(out_path),
+            "--method",
+            "cosine",
+            "--quantile",
+            "0.90",
+        ]
+    )
     assert exit_code == 0
     assert out_path.exists()
     captured = capsys.readouterr()
     assert "OOD profile fitted successfully" in captured.out
 
 
-def test_cli_extract_embeddings_and_evaluate(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -> None:
+def test_cli_extract_embeddings_and_evaluate(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
     img_dir = tmp_path / "images"
     img_dir.mkdir()
     img_path = img_dir / "test1.jpg"
@@ -89,7 +95,9 @@ def test_cli_extract_embeddings_and_evaluate(tmp_path: Path, capsys: pytest.Capt
     assert eval_res["total_samples"] == 1
 
 
-def test_cli_predict_image_json_and_semantic_exit(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -> None:
+def test_cli_predict_image_json_and_semantic_exit(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
     # 1. Setup mock pipeline artifacts
     feature_dim = 576
     model = DeepfakeModel(feature_dim=feature_dim)
@@ -119,15 +127,21 @@ def test_cli_predict_image_json_and_semantic_exit(tmp_path: Path, capsys: pytest
     Image.new("RGB", (224, 224), color=(100, 100, 100)).save(img_path)
 
     # Predict with --json
-    exit_code = main([
-        "predict",
-        str(img_path),
-        "--model-path", str(checkpoint_path),
-        "--profile-path", str(ood_path),
-        "--manifest-path", str(manifest_path),
-        "--ood-sha256", str(ood_sha256),
-        "--json",
-    ])
+    exit_code = main(
+        [
+            "predict",
+            str(img_path),
+            "--model-path",
+            str(checkpoint_path),
+            "--profile-path",
+            str(ood_path),
+            "--manifest-path",
+            str(manifest_path),
+            "--ood-sha256",
+            str(ood_sha256),
+            "--json",
+        ]
+    )
     assert exit_code == 0
     captured = capsys.readouterr()
     parsed = json.loads(captured.out)
@@ -137,16 +151,22 @@ def test_cli_predict_image_json_and_semantic_exit(tmp_path: Path, capsys: pytest
     assert "scores" in parsed
 
     # Predict with --exit-code-decision
-    exit_code_decision = main([
-        "predict",
-        str(img_path),
-        "--model-path", str(checkpoint_path),
-        "--profile-path", str(ood_path),
-        "--manifest-path", str(manifest_path),
-        "--ood-sha256", str(ood_sha256),
-        "--plain",
-        "--exit-code-decision",
-    ])
+    exit_code_decision = main(
+        [
+            "predict",
+            str(img_path),
+            "--model-path",
+            str(checkpoint_path),
+            "--profile-path",
+            str(ood_path),
+            "--manifest-path",
+            str(manifest_path),
+            "--ood-sha256",
+            str(ood_sha256),
+            "--plain",
+            "--exit-code-decision",
+        ]
+    )
     # Must be either 0 (REAL), 2 (FAKE), or 3 (UNKNOWN)
     assert exit_code_decision in (0, 2, 3)
 
@@ -180,16 +200,22 @@ def test_cli_batch_predict(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -
     Image.new("RGB", (224, 224)).save(img1)
     Image.new("RGB", (224, 224)).save(img2)
 
-    exit_code = main([
-        "batch-predict",
-        str(img1),
-        str(img2),
-        "--model-path", str(checkpoint_path),
-        "--profile-path", str(ood_path),
-        "--manifest-path", str(manifest_path),
-        "--ood-sha256", str(ood_sha256),
-        "--json",
-    ])
+    exit_code = main(
+        [
+            "batch-predict",
+            str(img1),
+            str(img2),
+            "--model-path",
+            str(checkpoint_path),
+            "--profile-path",
+            str(ood_path),
+            "--manifest-path",
+            str(manifest_path),
+            "--ood-sha256",
+            str(ood_sha256),
+            "--json",
+        ]
+    )
     assert exit_code == 0
     captured = capsys.readouterr()
     parsed = json.loads(captured.out)

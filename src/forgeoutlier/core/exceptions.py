@@ -1,7 +1,5 @@
 """Domain-specific exception hierarchy with sanitized messaging."""
 
-from typing import Optional
-
 
 class ForgeOutlierException(Exception):
     """Base exception for all ForgeOutlier errors."""
@@ -56,4 +54,3 @@ class ExecutionFailureError(ForgeOutlierException):
 
     def __init__(self, message: str) -> None:
         super().__init__(message, code="EXECUTION_FAILURE_ERROR")
-
