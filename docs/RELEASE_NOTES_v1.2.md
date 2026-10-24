@@ -23,18 +23,18 @@ Proses build dieksekusi secara terisolasi menggunakan backend standar `hatchling
 
 | Nama File Artefak | Format | Status Twine | Deskripsi |
 | :--- | :--- | :--- | :--- |
-| `dist/forgeoutlier-1.0.0-py3-none-any.whl` | Wheel (Pure Python) | **PASSED** | Distribusi binary platform-agnostik tanpa native C extensions |
-| `dist/forgeoutlier-1.0.0.tar.gz` | Source Distribution (sdist) | **PASSED** | Distribusi kode sumber lengkap beserta manifest |
+| `dist/forgeoutlier-1.2.0-py3-none-any.whl` | Wheel (Pure Python) | **PASSED** | Distribusi binary platform-agnostik tanpa native C extensions |
+| `dist/forgeoutlier-1.2.0.tar.gz` | Source Distribution (sdist) | **PASSED** | Distribusi kode sumber lengkap beserta manifest |
 
 ### 2.1 Verifikasi Instalasi Clean Venv Tanpa Scikit-Learn
-Pengujian instalasi wheel dilakukan pada lingkungan terisolasi (`.clean_venv`) yang tidak memiliki paket `scikit-learn`:
+Pengujian instalasi wheel dilakukan pada lingkungan terisolasi yang tidak memiliki paket `scikit-learn`:
 ```bash
 # Validasi import runtime dan estimasi Ledoit-Wolf pure NumPy
-Installed pure whl test: mu shape (25,) cov shape (25, 25) shrinkage 0.8925251299702115
+Installed pure whl test: mu shape (25,) cov shape (25, 25)
 
 # Validasi eksekusi CLI entry point
 forgeoutlier --version
--> forgeoutlier 1.0.0
+-> forgeoutlier 1.2.0
 ```
 
 ---

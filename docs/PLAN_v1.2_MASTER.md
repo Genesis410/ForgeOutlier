@@ -106,10 +106,10 @@ Menyusun rangkaian dokumen teknis di direktori `docs/` yang mencerminkan arsitek
 
 ### 5.1 Kriteria Masuk Rilis (Release Gate Criteria)
 Rilis publik v1.2.0 HANYA dieksekusi jika:
-- [ ] Tahap 1 Audit D001–D050: 100% matriks berstatus `PASS` atau terdokumentasi deviasinya.
-- [ ] Tahap 2 Validasi Ilmiah: Laporan empiris tuntas dengan dataset dan checkpoint nyata.
-- [ ] Tahap 3 Tata Kelola: Lisensi kode, bobot, dan atribusi bersih tanpa konflik legal.
-- [ ] Tahap 4 Distribusi: Wheel teruji sukses di clean-room Windows & Linux.
+- [x] Tahap 1 Audit D001–D050: 100% matriks berstatus `PASS` atau terdokumentasi deviasinya (`docs/AUDIT_D001_D050_MATRIX.md`).
+- [x] Tahap 2 Validasi Ilmiah: Laporan empiris tuntas dengan dataset dan checkpoint nyata (`docs/EMPIRICAL_EVALUATION_REPORT.md`).
+- [x] Tahap 3 Tata Kelola: Lisensi kode, bobot, dan atribusi bersih tanpa konflik legal (Apache-2.0, non-commercial weight attribution).
+- [x] Tahap 4 Distribusi: Wheel teruji sukses di clean-room Windows (`dist/forgeoutlier-1.2.0-py3-none-any.whl`, SHA256 terbit).
 
 ### 5.2 Langkah Operasional Rilis
 1. **Commit & Tag Alignment**:
