@@ -1,5 +1,11 @@
 # ForgeOutlier Lite - Git Ignore
-.confidential/
+# BEGIN get-a-prd: confidential local planning and AI memory
+/.Confidential
+/.confidential/
+/graphify-out/
+/.codebase-memory/
+/.codebase-memory-cache/
+# END get-a-prd: confidential local planning and AI memory
 __pycache__/
 *.py[cod]
 *$py.class
