@@ -2,601 +2,1751 @@
   {
     "path": "benchmarks\\empirical_run\\images\\id_real_000.jpg",
     "label": "REAL",
-    "domain": "id_natural"
+    "domain": "id_natural",
+    "sha256": "2e818a367c47c98060998b30e6012f4dcabb6c9e069cd142a0b9cdce5782fbff",
+    "size_bytes": 31427
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_real_001.jpg",
     "label": "REAL",
-    "domain": "id_natural"
+    "domain": "id_natural",
+    "sha256": "c53eebeb9ff263168b62fa296d9c6b6083f1cf9179513b351fb95775d8d4ffb2",
+    "size_bytes": 31394
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_real_002.jpg",
     "label": "REAL",
-    "domain": "id_natural"
+    "domain": "id_natural",
+    "sha256": "9c4dd2b9efd8fb8d153069418a7c5ec9186b18779e5bb374bd2d51190aea11c8",
+    "size_bytes": 31509
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_real_003.jpg",
     "label": "REAL",
-    "domain": "id_natural"
+    "domain": "id_natural",
+    "sha256": "c3df087ba402c3e0daa9a72d1a9f09c575d8797db14b243ce6eef5a144f6702c",
+    "size_bytes": 31423
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_real_004.jpg",
     "label": "REAL",
-    "domain": "id_natural"
+    "domain": "id_natural",
+    "sha256": "68991f398cf1cc8af98abc70e3489bcd071c93209fb17e37dba60fdcd80bac5c",
+    "size_bytes": 31481
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_real_005.jpg",
     "label": "REAL",
-    "domain": "id_natural"
+    "domain": "id_natural",
+    "sha256": "aebcebcaa2a622b1eb8a07650b7cc77154bd2dd5403e4cf9425aff01288ec001",
+    "size_bytes": 31429
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_real_006.jpg",
     "label": "REAL",
-    "domain": "id_natural"
+    "domain": "id_natural",
+    "sha256": "fff6bd51af12d865504f4de4c575fd1f6bd800c4e64233c97e29c6b7aa6f7087",
+    "size_bytes": 31489
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_real_007.jpg",
     "label": "REAL",
-    "domain": "id_natural"
+    "domain": "id_natural",
+    "sha256": "a53af009d67bc03a16d5319ee86a83b3dff54a729f44abe030200a74f33f0091",
+    "size_bytes": 31451
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_real_008.jpg",
     "label": "REAL",
-    "domain": "id_natural"
+    "domain": "id_natural",
+    "sha256": "d77988efecef31df94e271066f41e8cd72b8a95000fdd841d0762e38092d3e38",
+    "size_bytes": 31368
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_real_009.jpg",
     "label": "REAL",
-    "domain": "id_natural"
+    "domain": "id_natural",
+    "sha256": "abcced6a029bcf56d9b1674efda96f1c9f4783cc6e425a8022ef0a81158d3e95",
+    "size_bytes": 31491
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_real_010.jpg",
     "label": "REAL",
-    "domain": "id_natural"
+    "domain": "id_natural",
+    "sha256": "6fdf5b6b8a5004f23abffc38690d10f18e7c0a6db2e86e5e524aea7a01657a2c",
+    "size_bytes": 31401
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_real_011.jpg",
     "label": "REAL",
-    "domain": "id_natural"
+    "domain": "id_natural",
+    "sha256": "d4937855a2859a421b1f24b41f1a129b68178c10bb7cce1484f53ebdbcc7a64d",
+    "size_bytes": 31468
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_real_012.jpg",
     "label": "REAL",
-    "domain": "id_natural"
+    "domain": "id_natural",
+    "sha256": "1cbcbdb832aa9dbf632c2845e33a42dbe7ab90945661b5154a15ae82a36e30d6",
+    "size_bytes": 31474
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_real_013.jpg",
     "label": "REAL",
-    "domain": "id_natural"
+    "domain": "id_natural",
+    "sha256": "314483dcdebf5e2572a8ade2c501bf9204d4e3269ed662f726a43ead1dd8f2bf",
+    "size_bytes": 31387
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_real_014.jpg",
     "label": "REAL",
-    "domain": "id_natural"
+    "domain": "id_natural",
+    "sha256": "68e959003763a92aeb7cd2cfd7dcc3c1c0f6697eeae529d586f8c9927c2e5a4c",
+    "size_bytes": 31400
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_real_015.jpg",
     "label": "REAL",
-    "domain": "id_natural"
+    "domain": "id_natural",
+    "sha256": "e7d9350ac5ede7c0f9ed187e7cd2689f4a2beea2bf0df8b5629f006204318a89",
+    "size_bytes": 31405
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_real_016.jpg",
     "label": "REAL",
-    "domain": "id_natural"
+    "domain": "id_natural",
+    "sha256": "f1db42357635fed8eda656cc4f4f4ba989d7b4a68458754e0a82a4a3d65f6525",
+    "size_bytes": 31465
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_real_017.jpg",
     "label": "REAL",
-    "domain": "id_natural"
+    "domain": "id_natural",
+    "sha256": "59b437c460148f7b466ea474bd381ff7a78c859409b3dc7da3181a1aea8be4f7",
+    "size_bytes": 31436
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_real_018.jpg",
     "label": "REAL",
-    "domain": "id_natural"
+    "domain": "id_natural",
+    "sha256": "812a692ebc17ba1f4da04b1a640f9a78318232e181192857df88495fc930e61c",
+    "size_bytes": 31465
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_real_019.jpg",
     "label": "REAL",
-    "domain": "id_natural"
+    "domain": "id_natural",
+    "sha256": "455420dc41500cdb2bdacee36445f62350462b02e8b619453c307e91fb22e7e3",
+    "size_bytes": 31444
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_020.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "87963e682befea312c821bab037db569d778fe794978326e9b7c04a00b28f39b",
+    "size_bytes": 31378
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_021.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "e77520c69c66ae6027c22563c5dc951f825f43708c11d5d9f8a0cc416ea5801a",
+    "size_bytes": 31455
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_022.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "6807510eb961a28948c2e9c3e9846e3e2b633e4c9fcbae6651837fcef7d782c0",
+    "size_bytes": 31335
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_023.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "07a9ed435acdabcf12f5ef4255803c40f3f2a5850ee9ee1345721e895eb41750",
+    "size_bytes": 31445
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_024.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "29bbd7066cb1f7cbf994f92686880c9c71a0ddb0393eb9ba79c3d29e1f08f647",
+    "size_bytes": 31475
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_025.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "2b3a080926620f797c06eda25a31602f0f14f739e34d2eb7a3a0507fd6a8253b",
+    "size_bytes": 31463
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_026.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "bc7448a7a3f0fb1be260a05492a981174cf484e9e1e22907283c402001858773",
+    "size_bytes": 31421
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_027.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "58421f7b6903c2cea5190213f24799abbd081667c3689e103cb27cd9fcf3786c",
+    "size_bytes": 31463
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_028.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "8612d6df5a87f9ec2f2e2f1443e48a8c9cb03956dbecb9dc9227557e06b89ce0",
+    "size_bytes": 31494
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_029.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "01b43a244a937e5e759d400f73eb5a8d650598a0089a494a60b98e818f37689f",
+    "size_bytes": 31384
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_030.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "f11e9e77e7a3ca7e9e2085363ff71cb1951e152991a7129251604fe9641e28a4",
+    "size_bytes": 31456
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_031.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "d36e3d91c7dc5609742880bd794cd5a97034b2760d547ac41f4d335fe6c86f8a",
+    "size_bytes": 31449
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_032.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "10b1641db4a4986c92f3492c82e4389cfd8303e13cf6bd39e9844d221a7e21f8",
+    "size_bytes": 31403
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_033.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "1653a353bf8995daf27d6c87ff3e26987753f59d68c7a46e6b4dd94de073ee9c",
+    "size_bytes": 31383
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_034.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "9dbe69514e495f05fe2f5c19d715ef3788ca6f743d6a6504f3bd4f5f3a793aa3",
+    "size_bytes": 31488
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_035.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "76d8f8bf67039e2dc4e90d19adce6e6507c3182d81d8ae86ce477afff9cbfe80",
+    "size_bytes": 31389
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_036.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "96936b621b483183ff805a6535796f2421edc10c55b1433fad60c5357b7540da",
+    "size_bytes": 31426
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_037.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "189dd3039b424d9f533b8269810299606aa0a5877f01edc0dfb17a234659a523",
+    "size_bytes": 31378
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_038.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "30aa60dd17101433dd248d9c5ea5a15340a9944ae7438efd501c5413051e73b3",
+    "size_bytes": 31431
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_039.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "59ad27e92c9f430d009586ac3b25c8a79a89af8d675bfdeebc7e2fa31c7ef251",
+    "size_bytes": 31408
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_040.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "79d305b76b9b4ac05b9d796c3126ec7555e9585ae39108e490ac3e8299a02120",
+    "size_bytes": 31468
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_041.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "49175225ae160680fce634c455bcd0ab7f89d9b34eb29989cea01c8d26d79857",
+    "size_bytes": 31436
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_042.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "7e301f7e00f1106d25a06b4b95f3147ff5d1cd58b8551191b4b9b13b271c9e06",
+    "size_bytes": 31471
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_043.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "8a6654a5c0200f5e001de28bddcfa72efb149f981c105dce5d5a5ec511c21bef",
+    "size_bytes": 31477
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_044.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "37f829c6da4a75f13d28dfba184b8e9e51c815d45968d402c21c2b86839afcac",
+    "size_bytes": 31385
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_045.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "4881da4108825bf63a3b3ec3d36d7d38c749d6d5a327ac0a09013b89fc662f4c",
+    "size_bytes": 31448
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_046.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "cae7dd152a8c85bfae55f9b649953564f8d040379a6869bf1c31f902d9af82f7",
+    "size_bytes": 31377
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_047.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "3b151d8e99dfa2322d109f878a1cededa25f17e3110ef37751a8254b24610c81",
+    "size_bytes": 31446
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_048.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "d420473b2dc6e4d0758c1d60fbc9f585532059b7a6d8e29ef898916cf3d393cf",
+    "size_bytes": 31401
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_049.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "2cb10c9b7ea7b305383bf646ddb27e2ba175b0fbf69df28b039e275f7f6155f5",
+    "size_bytes": 31419
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_050.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "e80cab07319f62e3e79043217a4beb115ebb158032becd71dfd69fe2cb4393be",
+    "size_bytes": 31502
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_051.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "39bc8d91af0313bd4745a4ee280f26dd61501ff61147b3f35a15e750ba8ca1a3",
+    "size_bytes": 31475
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_052.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "c3066199b76a26ca7b7a07e4613e16737b6c264a7e5e6d2e120109c07fe2c937",
+    "size_bytes": 31419
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_053.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "3fe3e85ccca57f76191a2ad60076474f7048ed827d9af4ceb227fb3841da1822",
+    "size_bytes": 31402
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_054.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "5e24492d955ba25033f46e82432020a90508d852bda1cbb185cb696afd4c793b",
+    "size_bytes": 31414
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_055.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "15448c1f41f650125c4dd9594c1a8d8fb6cc5c7a0ff938b70a32b6798f089dcd",
+    "size_bytes": 31434
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_056.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "5459a8da7ac12ee08d56011fff382da1d010c0777e07c46283805768ce985545",
+    "size_bytes": 31435
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_057.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "060e41cb89d2ef510a42c727b02eaef8fe8b9bc6232ad7f52112d76725a23dec",
+    "size_bytes": 31393
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_058.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "2d0e441c0a53a46af3de11525b04452b2bd54c7ad2352d6467c4f8f9f6d33444",
+    "size_bytes": 31412
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_059.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "21e10bbe78c94a126d6ac420607513267eb145403cda6e3d29dac615d21548aa",
+    "size_bytes": 31413
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_060.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "5e39ffadc7d61e7df0d42cdd61de2413798947fbb2240b16441311aa66b4f8a6",
+    "size_bytes": 31396
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_061.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "dcefddd74ddaf26c53c956f4672d8533aef23aacf8fe34254734495c3e3b7b0c",
+    "size_bytes": 31474
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_062.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "2266c0a7b8637433c70d0eca6f0f0542407da233cc7a3d5daf484470f5e2abc5",
+    "size_bytes": 31335
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_063.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "e0c8e235c792924d427a78f43a40afb98e3ee34063f19fd40879e58757e58e52",
+    "size_bytes": 31516
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_064.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "bb64be86918c8ac0f3855dfc03f77c75bc47898d69db5d54a1860215e39ab52a",
+    "size_bytes": 31474
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_065.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "99eee3b545abff26ce0d41d0bf79ec5a81dd3d975e0f7c6acab082192130f7cc",
+    "size_bytes": 31432
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_066.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "b1c03f7729d3c5a1fb79ac322822722ae5495bd578d9b6a2223d7719675565cc",
+    "size_bytes": 31442
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_067.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "127e71a1eabbf0c132acc0bea265ed7000eadea58d4cb28a076b509af0889f6b",
+    "size_bytes": 31378
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_068.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "680e6ca46ed0a174d71fd4eed2cfccaa316574b07a8539eb6f4451114fb7f2d1",
+    "size_bytes": 31505
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_069.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "7f738c4b2e47faa0c358d1706a84b5a4ffe74fd0df446884184c1d56dbaa45f4",
+    "size_bytes": 31397
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_070.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "0ecfdae92176061801d7c7c8b1ca3bc6f8a0340c1c79fe2bab7dd3c98b6af8cf",
+    "size_bytes": 31525
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_071.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "775a386353e4487d388c3392ce3a3e233bf3ed8640c3a0441e0108f0796d4a49",
+    "size_bytes": 31439
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_072.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "39389749359b4d823f596b36265b1c82adbca670c93920fb410159cff2cd8b0f",
+    "size_bytes": 31494
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_073.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "d2b138615558e1a09ba7646578c0aaf89f432a60452ba060d7235d01bb665178",
+    "size_bytes": 31510
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_074.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "5c7d2a566aecd508ac8e0e27876c347bf6e37996c574c9372f5d729bfba0e6bf",
+    "size_bytes": 31392
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_075.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "a21bb42fcd02c9d5bbd1b6e67fb5b41c2c26dffd93f32b4506f50f9e374b0180",
+    "size_bytes": 31414
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_076.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "a8d1bfc97ac8ec8988ffaa627e2833c638ed98a793052d1f3b2cc50c2890dc71",
+    "size_bytes": 31452
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_077.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "b2ddd7b6bfcdf8d9bfedd4b08644fa312ae5b371c1fc2b4223585f5b0325bb00",
+    "size_bytes": 31421
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_078.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "691142ebc9db29d47bc0df00d79d37349da6f6635de3bb5905a3e4cfce6b56c1",
+    "size_bytes": 31448
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_079.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "eec7b66126b7073becee04971bee1b44411c5cc7a3d9f018b162177339b27774",
+    "size_bytes": 31423
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_080.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "8ba79ec32edfc420226e2f1219362ca79f0e2c289865af857f349528e616be41",
+    "size_bytes": 31477
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_081.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "412907bb014cb4e78a6836c1acc62245c685653e6280462b79ab45f1118fe7d5",
+    "size_bytes": 31341
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_082.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "15f30096316082e6bba07aec5aa524e267e773d34b949f5f26e39629f3a17046",
+    "size_bytes": 31565
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_083.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "ffe3f4964ae45786dcc8885735ffb71824c0fdef504948a90382453bb78d666e",
+    "size_bytes": 31453
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_084.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "74dc3b0d08736281b984ba2d3cc49624c323b7fdc0791874fd9571e0085fbe59",
+    "size_bytes": 31415
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_085.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "0ab06afd2f10ded6ab71dc54f8621704405a84426de0b88d6dea01318adf129e",
+    "size_bytes": 31369
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_086.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "ec3cd9771f9b2be82614288994516de22cfc057a361078287e44f9d82d08954a",
+    "size_bytes": 31424
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_087.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "3e4864d61ba63fa22039493153bcfc2456207cc61beaf6af0b16db2a717f0ed8",
+    "size_bytes": 31391
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_088.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "9330d0335eb18bc90707602a06895787a7f59252dc3f20df26b56ce4f465be7e",
+    "size_bytes": 31407
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_089.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "5f7c460680374e11e86243f7eebb19da2b11ffea84b4c3952dce0f963de64ad3",
+    "size_bytes": 31444
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_090.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "83c3d093bc4b381e1c0fd8880314ba869727432a8dea85cf74a257855a888c46",
+    "size_bytes": 31380
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_091.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "4a59720782e73df04aaa10351a4d8352aa1292ffe614335515c23ac5d3bf0e06",
+    "size_bytes": 31402
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_092.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "9e92c6f77107462cb1c67ac25c611e58751de5b64c64cc2d7f96fd0f453d7092",
+    "size_bytes": 31482
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_093.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "80d9b9a45cbfa8a42038eb5e53f0f6470ad60d39d591f041a4c8dfe48ee6de7b",
+    "size_bytes": 31408
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_094.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "c01140830b148338e7d9214b65fa1ec0ec0485d2368c7421f729e22b9896302c",
+    "size_bytes": 31496
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_095.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "8044bef874b08dd9e788376321c88a17037a5e8d83e267c895e9893ccd63d937",
+    "size_bytes": 31396
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_096.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "b3f00f4edcd1f30dd3c179066e2e0850a20e71666c0c11cbdd978f9f651210e3",
+    "size_bytes": 31564
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_097.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "fb8aa9d791abc41cbc33394cf9a83d1f89414fb5cbcd6ce30766fdbe26838deb",
+    "size_bytes": 31471
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_098.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "299b7699a247b8a545821b4f099e85edb9fcf9f9478a2072ee36787c61e4bea9",
+    "size_bytes": 31409
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_099.jpg",
+    "label": "REAL",
+    "domain": "id_natural",
+    "sha256": "5640a3b64f362fe170a329ed615bdd70cf6010d810d6aeccc1f82dd108360075",
+    "size_bytes": 31359
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_fake_000.jpg",
     "label": "FAKE",
-    "domain": "id_manipulated"
+    "domain": "id_manipulated",
+    "sha256": "09818f7991315dc43320e8b72e816ac2222f5586c1b6e2cad99f80995c8e4b3f",
+    "size_bytes": 31464
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_fake_001.jpg",
     "label": "FAKE",
-    "domain": "id_manipulated"
+    "domain": "id_manipulated",
+    "sha256": "15edb18cde8cb7a8f429db82579ad92845f8d50ba55c62c91125ae166be82588",
+    "size_bytes": 31505
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_fake_002.jpg",
     "label": "FAKE",
-    "domain": "id_manipulated"
+    "domain": "id_manipulated",
+    "sha256": "affba5c5c1e463b4a4d95fe1d123910cf424cd7f25d9e6ffda11a245231ea52f",
+    "size_bytes": 31536
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_fake_003.jpg",
     "label": "FAKE",
-    "domain": "id_manipulated"
+    "domain": "id_manipulated",
+    "sha256": "a8808891c3363c2b29b89d0111553de2683d1e7ccb3011180c63eb052b0aff2b",
+    "size_bytes": 31514
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_fake_004.jpg",
     "label": "FAKE",
-    "domain": "id_manipulated"
+    "domain": "id_manipulated",
+    "sha256": "4111f0c2957061c23045e66464a64ce25cb5e36833645a315f31b42826126760",
+    "size_bytes": 31408
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_fake_005.jpg",
     "label": "FAKE",
-    "domain": "id_manipulated"
+    "domain": "id_manipulated",
+    "sha256": "4ed574ea079ebdace9fed0b6522925441d3a88fa537797b7bdb360ae10d417a5",
+    "size_bytes": 31558
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_fake_006.jpg",
     "label": "FAKE",
-    "domain": "id_manipulated"
+    "domain": "id_manipulated",
+    "sha256": "4080ad24507c2f126cc204bc37a81ba0f5b8f39ec14e614d352789975e3ebe47",
+    "size_bytes": 31456
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_fake_007.jpg",
     "label": "FAKE",
-    "domain": "id_manipulated"
+    "domain": "id_manipulated",
+    "sha256": "c844b986de7c6a0d3f41842961242ff60ffd90db8773cb0ead5e9ffd440aee34",
+    "size_bytes": 31522
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_fake_008.jpg",
     "label": "FAKE",
-    "domain": "id_manipulated"
+    "domain": "id_manipulated",
+    "sha256": "13f7b23a20041dfc1aa77739ee92e9bdcfe2139aa5075b700dab3b690319c946",
+    "size_bytes": 31487
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_fake_009.jpg",
     "label": "FAKE",
-    "domain": "id_manipulated"
+    "domain": "id_manipulated",
+    "sha256": "e6236e7c24a77e8e25e6e5eeaa6c390dbb7f34a5fcbfc3eb9c55cc88d8e3f2d7",
+    "size_bytes": 31543
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_fake_010.jpg",
     "label": "FAKE",
-    "domain": "id_manipulated"
+    "domain": "id_manipulated",
+    "sha256": "62abdc085846f8de2b047e4dce345fa15eff811f2b57de7959b4b7357b786453",
+    "size_bytes": 31504
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_fake_011.jpg",
     "label": "FAKE",
-    "domain": "id_manipulated"
+    "domain": "id_manipulated",
+    "sha256": "5497b03f160760f09bddc67fcd84863bfa25a7bb1ed7f8f58af79508f4606d50",
+    "size_bytes": 31543
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_fake_012.jpg",
     "label": "FAKE",
-    "domain": "id_manipulated"
+    "domain": "id_manipulated",
+    "sha256": "ef6c6f17f23977ee88712cfe1605de4a55c94173ebc38930aed2d00a2f019176",
+    "size_bytes": 31504
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_fake_013.jpg",
     "label": "FAKE",
-    "domain": "id_manipulated"
+    "domain": "id_manipulated",
+    "sha256": "32023a4917ca2087153e5c3adca6c34433d2ae7f17b8e5b8e04473f884dc6def",
+    "size_bytes": 31478
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_fake_014.jpg",
     "label": "FAKE",
-    "domain": "id_manipulated"
+    "domain": "id_manipulated",
+    "sha256": "ef3941cc4464b889a5066d940c66c0ad482bd3312acebe57c48a41955554968c",
+    "size_bytes": 31552
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_fake_015.jpg",
     "label": "FAKE",
-    "domain": "id_manipulated"
+    "domain": "id_manipulated",
+    "sha256": "5d3f4d2d55b1a1445ac0e21230ca4e047ebeac7928d9de9c401ada7e73009042",
+    "size_bytes": 31455
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_fake_016.jpg",
     "label": "FAKE",
-    "domain": "id_manipulated"
+    "domain": "id_manipulated",
+    "sha256": "433c064d8fd4f1c503bfaab29b89c78ad8db2945237cc8b65b1884eafb473c4c",
+    "size_bytes": 31444
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_fake_017.jpg",
     "label": "FAKE",
-    "domain": "id_manipulated"
+    "domain": "id_manipulated",
+    "sha256": "cbfc92952ac9d10be894138771dd8cbbb60d761a409d9181f12d868d498bfdcb",
+    "size_bytes": 31397
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_fake_018.jpg",
     "label": "FAKE",
-    "domain": "id_manipulated"
+    "domain": "id_manipulated",
+    "sha256": "d51eacb5ce3858c522e42a24d3bd05c801dc270af242a215e1db9cdb9cb15894",
+    "size_bytes": 31419
   },
   {
     "path": "benchmarks\\empirical_run\\images\\id_fake_019.jpg",
     "label": "FAKE",
-    "domain": "id_manipulated"
+    "domain": "id_manipulated",
+    "sha256": "0ded79d61930cf4d0f609768a632eda717d39374a3e58adca1c18df0a49c61f1",
+    "size_bytes": 31411
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_020.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "2576e74d81d6f46f16b9bf932e560a455519ff98742493694b9d748e68d485c3",
+    "size_bytes": 31575
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_021.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "f0f572a2eecb129a57d20c364922f55861d4ea8755b191be836bc69f89697c87",
+    "size_bytes": 31450
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_022.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "a3939e4a3e7b423f9b0379021de9a664cc870d9e83994002d697c30d8c153bf9",
+    "size_bytes": 31499
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_023.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "2707de7bf802a12eeffafb11bc6c5ac2603fc0287a19d93944b2a22209356f7c",
+    "size_bytes": 31519
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_024.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "a930381f86d0db6c88ae3fa86e90756d207eb1697ada7c41c6bd08a0c187f9c2",
+    "size_bytes": 31485
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_025.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "30518c8e1cc5548d19221410640d3cdc572a1d9a8559fc6f2f21a191d7b31edb",
+    "size_bytes": 31388
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_026.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "d9047c6eb813a03b150fe72a1060e53428a1cd779dabe626354b3071a07d8cec",
+    "size_bytes": 31444
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_027.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "6fdb492cb5dcf346632c35895d1b1fd1b34079f2d4eed3a36ff3cb24b8cc886b",
+    "size_bytes": 31449
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_028.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "c6fcb0d8af8a4225b49026227169d74d2880b6be48b6409d7ad7794785b63b84",
+    "size_bytes": 31514
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_029.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "8e07f85d11d8db9488c4053c02cf2b21f88d026f9005ef13e19fe1dbde61f1a7",
+    "size_bytes": 31483
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_030.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "09d935fa58263364e594a381371af5a62bf27784c85971db0700bb390dadbbfd",
+    "size_bytes": 31481
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_031.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "9e234c0bb6c749ab0fa3a5b2077467b179ef19d0de4259aed3b4fa5fe916b563",
+    "size_bytes": 31414
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_032.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "8cea3ed04fe3f9a6d162a7a99a70073df987f2aeeef5b2a2e786554a1b5c8be4",
+    "size_bytes": 31420
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_033.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "4a083ae091451e7ec189ae8a55691333baf1056771f792f591fd8f807de11781",
+    "size_bytes": 31470
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_034.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "faca67d80c69b482be65cddfa531983ebbcd9adb1c9445dac963519368a540c3",
+    "size_bytes": 31422
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_035.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "39cd2418726888008f0e83546ec3e9f1655a45c92c941e6dafccad17bf9ec9e0",
+    "size_bytes": 31441
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_036.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "d7f07d9238a26cf5d424fee19a3a19431bd88b5f26c56f95f1de8618d482025f",
+    "size_bytes": 31480
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_037.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "336285015c38fe2960e20cbf386245b360014793a9f6792ee67f1d347f96bf50",
+    "size_bytes": 31466
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_038.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "fcbc875a63b2e61b64cacc43931248a04d5a46ba1b57f36ccff65164b9e7f58f",
+    "size_bytes": 31471
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_039.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "0807b2c02ec270dcafbf82bfa1566d57d48e0fed58d956cd2ccb70a271a994a5",
+    "size_bytes": 31598
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_040.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "d22ad065cf210d4a55239a71598ecda0b012f30edab93c806fd478c89fc401f3",
+    "size_bytes": 31473
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_041.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "fe47dbffe2acb1b9402f27fdb19fbaa375cfc68d59f950deae9e1a14492fc18d",
+    "size_bytes": 31427
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_042.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "69b0d4071f04f5d557b06e1790879bc5025c05cb717512e3e03f2866fe06ba4e",
+    "size_bytes": 31437
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_043.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "20b003bf64abd503031fc5404c53588f001a17acdaf05728366ee05a20c7c0af",
+    "size_bytes": 31483
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_044.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "7bc14bdde81685ec48d916972c3d69e8c8f8b438436f9bde3292d58a21c6e748",
+    "size_bytes": 31495
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_045.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "0629e234d53831d30635a5a3a0efe4742b1dca102e37e565b2f7da6fc9dd78d4",
+    "size_bytes": 31496
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_046.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "7ac1b320b7a7a6d2267f22bed883275b715e30e0a88fd0a0b390a32ac4fb753b",
+    "size_bytes": 31515
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_047.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "dc8b70ab418da1b54844e392db3bfb92294ed82b425a3c39d6b808b8efab2613",
+    "size_bytes": 31546
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_048.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "466ae7d8f3cb7de410a7319c1c27ad813e69b8a5f361f4e1c74ac61b2b9d621b",
+    "size_bytes": 31452
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_049.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "a9b1ae119a5b9910db85e4923e5b780e626e9ae44d62bb14de9e02866a3efa59",
+    "size_bytes": 31514
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_050.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "26c7d55bfb8ee012e2272a4ceee7787810779fc10330b2aa48caeb33b0a48e62",
+    "size_bytes": 31479
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_051.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "f2ecbe89b34e33c0576a1a0747283fb416773d8f00d58f6c155525bafa275c77",
+    "size_bytes": 31466
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_052.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "80ffa00aaae54d9a6bc0ce8479a4c0a42c83f3dd93c1aa15efb09ddb504c72a4",
+    "size_bytes": 31491
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_053.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "6bf4cf1d741bcd2d2d1c5c10ddc45bcb7b6525cb0c1947c14c6ee669638e25f8",
+    "size_bytes": 31515
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_054.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "8fc3d72587e0f63836d0e94a88925f6dc288b77ad1e3d0f015b161a81a45c59b",
+    "size_bytes": 31468
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_055.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "42363c2539a4b4348b29f8016c22a15aebbb6c3cef5679f79e99e221c096eab8",
+    "size_bytes": 31467
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_056.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "50d06f8bfc6b2eaec5fa8c14feb984e80d96b292cae410473fc1dd06579a3b65",
+    "size_bytes": 31525
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_057.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "2cea3e72a20a3f02dbcfb11a1e89f7dc6c158ab69ef8a77dd35701570bb6d212",
+    "size_bytes": 31502
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_058.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "aea78192e22f2235b4ff2e815a4669d0e75f4b5d57a8fd202a4d256cd2a627dc",
+    "size_bytes": 31584
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_059.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "229e3e18ec8c00f73f6d359ae6dac527379ade5d6a3b0632509d4995c2eb2ecf",
+    "size_bytes": 31509
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_060.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "84d20a861fdc56d0b1764010039537910b2d2387d414003648831113cb311a3b",
+    "size_bytes": 31437
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_061.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "0880152e7d87936337d677a535ae5a36315d86b62b21c65f6ee184ee1750e07a",
+    "size_bytes": 31451
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_062.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "809590308c3384f912b1678d8097944f3406d64296ba902162032b9de403ddfd",
+    "size_bytes": 31475
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_063.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "8d4d54c45a5a79ce7a178f5883e116101fdcab689fbf69a0d5207746cca2fa87",
+    "size_bytes": 31524
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_064.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "2d0fb0e889b7e37e2320456ac7575b630ada701c83b985e91beb6819a70dcc0a",
+    "size_bytes": 31444
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_065.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "c90c2b182f4db83d4d0555872f4884faeb6f1d04dffb9755d9eb074838d83a88",
+    "size_bytes": 31531
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_066.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "9d2e263f489374c0a1d76535fc55c371465949b39be4e5b99cb307371c61eeba",
+    "size_bytes": 31562
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_067.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "b666e0a43ea02997909656888b8f9e627a479ffa12dd6df9c59547964aa5dc07",
+    "size_bytes": 31453
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_068.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "ea51e6fc3b0ea349071ab79db5e2200d28fa4be0f3d795011830cedbee480830",
+    "size_bytes": 31393
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_069.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "2eae451906a6baa8215627fbcb14ec19df7ea841eab2787369a98a11b833b053",
+    "size_bytes": 31466
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_070.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "b4eb784ba259007b77d875b99bfc2d6bcbd347002ca4207427a6eeb7e815e0ba",
+    "size_bytes": 31529
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_071.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "86c3bc3373a0b4bba1e79628afa63181268aa449fac61bf7f5ba3096331e75b5",
+    "size_bytes": 31443
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_072.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "dc64dc614cb86cb0fb31802918073f4e07428137b813c191dbca1d18b04bd10d",
+    "size_bytes": 31538
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_073.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "28d9d39436792095f6db698d85b78afb1b0756ee26b6a3aeaf0fff093ac5ab07",
+    "size_bytes": 31477
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_074.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "169d259337826ab11180313ef863c7b28f2b70fd3fe397a76a2a96131a293e7a",
+    "size_bytes": 31593
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_075.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "2311fc0e121b72c4e3d4317994d49afb206c33d1c03e874e831602131a408930",
+    "size_bytes": 31525
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_076.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "b8143e852cd42fdb5f459fd6276ec5aa21d02f7bb82149b16cae97c2e38c4187",
+    "size_bytes": 31455
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_077.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "2865759da2f8d3c7be9f10ee1c74c3cde8b4562e88e83cea1416bbcf9958c1a8",
+    "size_bytes": 31467
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_078.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "cf962916fbe00d071424d3efe415b05acce136067a1de3b801365a2532a84bcd",
+    "size_bytes": 31489
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_079.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "1b1c8d84d6b71610e2caf0f4306eee604f03c19733e47a210fc0670e88fe96a6",
+    "size_bytes": 31484
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_080.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "0ab59d10e5de501441888fb10f15f153ea86e8fbe3e1f3bbd94bbfe230efeb78",
+    "size_bytes": 31488
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_081.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "699c97f42e6e3f484daab323cf66b84accb10bddcbd8aeeae876aa50bce46b65",
+    "size_bytes": 31568
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_082.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "11141b7d0c0adfae72825b0347262025a9e84215c8f6d3570e6e16ae563c5f38",
+    "size_bytes": 31491
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_083.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "4ca8f6c530d30819e101519a4292b88a30e6d7f51ffba405ac4c90a37c62331f",
+    "size_bytes": 31492
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_084.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "b591d30731839029407dfa5ae60f2cdea516816f6e7130adf1c99cd4dcb2850c",
+    "size_bytes": 31536
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_085.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "2549db6dc84a5464c5464f182a460105df5a9c72295a48640eeae6e04b36b9ed",
+    "size_bytes": 31480
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_086.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "25b8c11a4a4b3a255f29ab3f8f6ca39f155c19b778d2743ffec3599c8153b209",
+    "size_bytes": 31469
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_087.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "ef9f3750a2821f4b04b1751f492b1131c0580b5c6bab78445947e363c60f665c",
+    "size_bytes": 31510
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_088.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "64eb741378451b0eb70fc06cdffb984dcc3e9ec316093b08b9461049de6d4e73",
+    "size_bytes": 31521
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_089.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "757ead5f110c6121775c27ededeb67aa8cec7811d6bd163d16e2ac7d029ec039",
+    "size_bytes": 31370
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_090.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "068f2b24cbac7f669ce795fd09fc8329b25cb78b0c23d9cbf28975348bf33cdd",
+    "size_bytes": 31531
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_091.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "45db47584f5fa4dab92025c4969a983ca1a48f44b86d5ffc36d3293e061e6d35",
+    "size_bytes": 31541
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_092.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "40b21d9ef6b2cf7d0ebbf716df76ff07808f94d29725e1c269f357501a4f5f98",
+    "size_bytes": 31550
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_093.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "0d55d058a5ae000de6b0655550cccb9eddf935209b83d70ad4c2b14e7a2c62d8",
+    "size_bytes": 31508
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_094.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "6ed73c4f3a9f32076a1fbfd6b1be9523c62a6c8e76f8364cc3f01e161b7c6614",
+    "size_bytes": 31546
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_095.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "bc36f3cca41f3e25225c1e2dd5d4f5c6026c09a919987fb3c6fa5e6be0c4ca9b",
+    "size_bytes": 31533
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_096.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "d0f8681196f5740f6ce9cb69794210dcc661de2b2285873c179134bc489c565d",
+    "size_bytes": 31554
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_097.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "1e59ee78f4addfd22c650001e41d18c73b4c8fa7439bfc1b71908fe9c691dba2",
+    "size_bytes": 31517
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_098.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "8a7225ead049c82b5b6ed81ab54d38bab07dac901d97b4b51df7402cc0f069a2",
+    "size_bytes": 31448
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_099.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated",
+    "sha256": "758ccbc02f8784d24824f043b66fdcdeb769f02dfefd586bcc4984b652091668",
+    "size_bytes": 31526
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_anime_000.png",
     "label": "OOD",
-    "domain": "ood_anime"
+    "domain": "ood_anime",
+    "sha256": "e304111650d53cf9fd460b80de9c4442e1cbd3264da6b18aff82450a346e7599",
+    "size_bytes": 702
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_anime_001.png",
     "label": "OOD",
-    "domain": "ood_anime"
+    "domain": "ood_anime",
+    "sha256": "e304111650d53cf9fd460b80de9c4442e1cbd3264da6b18aff82450a346e7599",
+    "size_bytes": 702
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_anime_002.png",
     "label": "OOD",
-    "domain": "ood_anime"
+    "domain": "ood_anime",
+    "sha256": "e304111650d53cf9fd460b80de9c4442e1cbd3264da6b18aff82450a346e7599",
+    "size_bytes": 702
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_anime_003.png",
     "label": "OOD",
-    "domain": "ood_anime"
+    "domain": "ood_anime",
+    "sha256": "e304111650d53cf9fd460b80de9c4442e1cbd3264da6b18aff82450a346e7599",
+    "size_bytes": 702
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_anime_004.png",
     "label": "OOD",
-    "domain": "ood_anime"
+    "domain": "ood_anime",
+    "sha256": "e304111650d53cf9fd460b80de9c4442e1cbd3264da6b18aff82450a346e7599",
+    "size_bytes": 702
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_anime_005.png",
     "label": "OOD",
-    "domain": "ood_anime"
+    "domain": "ood_anime",
+    "sha256": "e304111650d53cf9fd460b80de9c4442e1cbd3264da6b18aff82450a346e7599",
+    "size_bytes": 702
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_anime_006.png",
     "label": "OOD",
-    "domain": "ood_anime"
+    "domain": "ood_anime",
+    "sha256": "e304111650d53cf9fd460b80de9c4442e1cbd3264da6b18aff82450a346e7599",
+    "size_bytes": 702
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_anime_007.png",
     "label": "OOD",
-    "domain": "ood_anime"
+    "domain": "ood_anime",
+    "sha256": "e304111650d53cf9fd460b80de9c4442e1cbd3264da6b18aff82450a346e7599",
+    "size_bytes": 702
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_anime_008.png",
     "label": "OOD",
-    "domain": "ood_anime"
+    "domain": "ood_anime",
+    "sha256": "e304111650d53cf9fd460b80de9c4442e1cbd3264da6b18aff82450a346e7599",
+    "size_bytes": 702
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_anime_009.png",
     "label": "OOD",
-    "domain": "ood_anime"
+    "domain": "ood_anime",
+    "sha256": "e304111650d53cf9fd460b80de9c4442e1cbd3264da6b18aff82450a346e7599",
+    "size_bytes": 702
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_anime_010.png",
     "label": "OOD",
-    "domain": "ood_anime"
+    "domain": "ood_anime",
+    "sha256": "e304111650d53cf9fd460b80de9c4442e1cbd3264da6b18aff82450a346e7599",
+    "size_bytes": 702
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_anime_011.png",
     "label": "OOD",
-    "domain": "ood_anime"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_anime_012.png",
-    "label": "OOD",
-    "domain": "ood_anime"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_anime_013.png",
-    "label": "OOD",
-    "domain": "ood_anime"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_anime_014.png",
-    "label": "OOD",
-    "domain": "ood_anime"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_anime_015.png",
-    "label": "OOD",
-    "domain": "ood_anime"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_anime_016.png",
-    "label": "OOD",
-    "domain": "ood_anime"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_anime_017.png",
-    "label": "OOD",
-    "domain": "ood_anime"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_anime_018.png",
-    "label": "OOD",
-    "domain": "ood_anime"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_anime_019.png",
-    "label": "OOD",
-    "domain": "ood_anime"
+    "domain": "ood_anime",
+    "sha256": "e304111650d53cf9fd460b80de9c4442e1cbd3264da6b18aff82450a346e7599",
+    "size_bytes": 702
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_medical_000.png",
     "label": "OOD",
-    "domain": "ood_medical"
+    "domain": "ood_medical",
+    "sha256": "63c6502256fa97d8a454766b3425dfc8d7eb7787467902f1130d9a87764f35f4",
+    "size_bytes": 116273
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_medical_001.png",
     "label": "OOD",
-    "domain": "ood_medical"
+    "domain": "ood_medical",
+    "sha256": "399edf3bd9a56527c7f7bfcee1b41425b98f5a7ab23d49d5e2cc0f7b6b1cdced",
+    "size_bytes": 116085
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_medical_002.png",
     "label": "OOD",
-    "domain": "ood_medical"
+    "domain": "ood_medical",
+    "sha256": "390fdc86cf3621bb2effbb8ce1cb048794a968be1ce1873f913d67d813c10a18",
+    "size_bytes": 115950
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_medical_003.png",
     "label": "OOD",
-    "domain": "ood_medical"
+    "domain": "ood_medical",
+    "sha256": "b6381e64c84f10baf25a8493788371806fe4844e6f15e779347b0941a54e72ac",
+    "size_bytes": 116118
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_medical_004.png",
     "label": "OOD",
-    "domain": "ood_medical"
+    "domain": "ood_medical",
+    "sha256": "5cb525851e483f074c03501a27eb4d532f4165bb4fb35da4a5ed52be3f284fd3",
+    "size_bytes": 116628
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_medical_005.png",
     "label": "OOD",
-    "domain": "ood_medical"
+    "domain": "ood_medical",
+    "sha256": "b1e22de89ce5ba39734d52181846268f4ceaab2970a1629b4e0427b0f9415749",
+    "size_bytes": 116472
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_medical_006.png",
     "label": "OOD",
-    "domain": "ood_medical"
+    "domain": "ood_medical",
+    "sha256": "55fe80e95c4b77d3c80c26e9099e5ca939a5d364af001a289f629073517f533a",
+    "size_bytes": 116359
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_medical_007.png",
     "label": "OOD",
-    "domain": "ood_medical"
+    "domain": "ood_medical",
+    "sha256": "b09902fda82dbc76954d56922882f9d00e22c1959519bf885a9268cefabb9fbf",
+    "size_bytes": 115796
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_medical_008.png",
     "label": "OOD",
-    "domain": "ood_medical"
+    "domain": "ood_medical",
+    "sha256": "2f97ad297373dac345e0db7937e537167657bb4395223205d502d9c4841b9659",
+    "size_bytes": 115699
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_medical_009.png",
     "label": "OOD",
-    "domain": "ood_medical"
+    "domain": "ood_medical",
+    "sha256": "21d0b932c50c7b9b49c6f0b420d4100909e3f188cf42219693b34b30bb0e501e",
+    "size_bytes": 116191
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_medical_010.png",
     "label": "OOD",
-    "domain": "ood_medical"
+    "domain": "ood_medical",
+    "sha256": "c1e2c8ed09f958b6ae8722ec35739a0c22c405fc49953e6b3775cba4cce01f6b",
+    "size_bytes": 116069
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_medical_011.png",
     "label": "OOD",
-    "domain": "ood_medical"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_medical_012.png",
-    "label": "OOD",
-    "domain": "ood_medical"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_medical_013.png",
-    "label": "OOD",
-    "domain": "ood_medical"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_medical_014.png",
-    "label": "OOD",
-    "domain": "ood_medical"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_medical_015.png",
-    "label": "OOD",
-    "domain": "ood_medical"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_medical_016.png",
-    "label": "OOD",
-    "domain": "ood_medical"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_medical_017.png",
-    "label": "OOD",
-    "domain": "ood_medical"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_medical_018.png",
-    "label": "OOD",
-    "domain": "ood_medical"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_medical_019.png",
-    "label": "OOD",
-    "domain": "ood_medical"
+    "domain": "ood_medical",
+    "sha256": "56bad39edb2d59cd145acb491e42a2c59dc13c446a2fcac2e3b3c006963c8c55",
+    "size_bytes": 116227
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_underwater_000.jpg",
     "label": "OOD",
-    "domain": "ood_underwater"
+    "domain": "ood_underwater",
+    "sha256": "5f1dc372b9eb0e0ee29df4bd1968121070cd83989f417e30d8bb5ac3e8de123a",
+    "size_bytes": 14986
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_underwater_001.jpg",
     "label": "OOD",
-    "domain": "ood_underwater"
+    "domain": "ood_underwater",
+    "sha256": "e6970f0911a8102e04da06906b0ec2850cb2ecf302f6ef0b6b2ffb7ee79a0391",
+    "size_bytes": 14950
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_underwater_002.jpg",
     "label": "OOD",
-    "domain": "ood_underwater"
+    "domain": "ood_underwater",
+    "sha256": "99e3229a4a7e41fe8123e7dc5432ec3088acfd2997b41b1449c2f07e9568ec7c",
+    "size_bytes": 14956
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_underwater_003.jpg",
     "label": "OOD",
-    "domain": "ood_underwater"
+    "domain": "ood_underwater",
+    "sha256": "277560ddedd5c00158da77146f5629c3e129704798e0eab00b682d7d447b72fe",
+    "size_bytes": 14979
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_underwater_004.jpg",
     "label": "OOD",
-    "domain": "ood_underwater"
+    "domain": "ood_underwater",
+    "sha256": "a428421bb25d38e7e007b8a8aa00f8a35a649fff9421b7e4a9a78816ce4c4307",
+    "size_bytes": 14961
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_underwater_005.jpg",
     "label": "OOD",
-    "domain": "ood_underwater"
+    "domain": "ood_underwater",
+    "sha256": "3d62735922a1bca3e912ac069ec4f5138cfa6b960eabf9038de6e1ed6fb9abf3",
+    "size_bytes": 14983
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_underwater_006.jpg",
     "label": "OOD",
-    "domain": "ood_underwater"
+    "domain": "ood_underwater",
+    "sha256": "8252be8fe7eff57fbb71d154910dbd9b17a07178c794a2fbd92ce7c81266c582",
+    "size_bytes": 15009
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_underwater_007.jpg",
     "label": "OOD",
-    "domain": "ood_underwater"
+    "domain": "ood_underwater",
+    "sha256": "8fb4b82b2367d555234ccd3307dd9ffdd6f59cc560b4fd2a2fe492b916264451",
+    "size_bytes": 14949
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_underwater_008.jpg",
     "label": "OOD",
-    "domain": "ood_underwater"
+    "domain": "ood_underwater",
+    "sha256": "eb56370cb8ab8bed2b8c3642c97ecaaa23300ac1233a6e5bfa681ce8fc412648",
+    "size_bytes": 14942
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_underwater_009.jpg",
     "label": "OOD",
-    "domain": "ood_underwater"
+    "domain": "ood_underwater",
+    "sha256": "585b8923bc546655a63083e58e417a698b064708a5c987a7acf1b14ce84850cb",
+    "size_bytes": 14907
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_underwater_010.jpg",
     "label": "OOD",
-    "domain": "ood_underwater"
+    "domain": "ood_underwater",
+    "sha256": "5cf1ef221f293f0ea7492a47a1154ed56a19e1cce19566d3f5c393f7fbf1a0f9",
+    "size_bytes": 14989
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_underwater_011.jpg",
     "label": "OOD",
-    "domain": "ood_underwater"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_underwater_012.jpg",
-    "label": "OOD",
-    "domain": "ood_underwater"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_underwater_013.jpg",
-    "label": "OOD",
-    "domain": "ood_underwater"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_underwater_014.jpg",
-    "label": "OOD",
-    "domain": "ood_underwater"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_underwater_015.jpg",
-    "label": "OOD",
-    "domain": "ood_underwater"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_underwater_016.jpg",
-    "label": "OOD",
-    "domain": "ood_underwater"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_underwater_017.jpg",
-    "label": "OOD",
-    "domain": "ood_underwater"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_underwater_018.jpg",
-    "label": "OOD",
-    "domain": "ood_underwater"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_underwater_019.jpg",
-    "label": "OOD",
-    "domain": "ood_underwater"
+    "domain": "ood_underwater",
+    "sha256": "ce082dfab1794c493e4b5d903282e7bb31c82c4ee4f12f143f03dd9a6c1d7fd5",
+    "size_bytes": 14952
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_noise_000.png",
     "label": "OOD",
-    "domain": "ood_noise"
+    "domain": "ood_noise",
+    "sha256": "eb6245d6ebb89919fa4960e26d3ffcfcbbd7b62b313061636690d701f9de1105",
+    "size_bytes": 150901
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_noise_001.png",
     "label": "OOD",
-    "domain": "ood_noise"
+    "domain": "ood_noise",
+    "sha256": "95c905cd2e468d932baf4a6b6ad4d6d1f0b0218fbbb8461b8cb5ec4df7e41c38",
+    "size_bytes": 150864
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_noise_002.png",
     "label": "OOD",
-    "domain": "ood_noise"
+    "domain": "ood_noise",
+    "sha256": "5e997f7869e4d670b690c491d018a57eb3626756a4b5efafffd925cd71d7fdda",
+    "size_bytes": 150968
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_noise_003.png",
     "label": "OOD",
-    "domain": "ood_noise"
+    "domain": "ood_noise",
+    "sha256": "4f2183b25c4ea0e76a5f06ee906e618b00988c46d75a377a56c5f9f97ac79e47",
+    "size_bytes": 150970
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_noise_004.png",
     "label": "OOD",
-    "domain": "ood_noise"
+    "domain": "ood_noise",
+    "sha256": "8c98c7ef97470e8c9007be2d00444a13ef14d28aed2259298327cef68b6a6aa0",
+    "size_bytes": 150935
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_noise_005.png",
     "label": "OOD",
-    "domain": "ood_noise"
+    "domain": "ood_noise",
+    "sha256": "7209d71ccb45b8912c731d1857c11bfa7d3e9422c8293b8c313afa818c081c4f",
+    "size_bytes": 150902
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_noise_006.png",
     "label": "OOD",
-    "domain": "ood_noise"
+    "domain": "ood_noise",
+    "sha256": "2ac0e7a964a4f475c5a56e8569e203073539597f05c4ba1269f840a093f82163",
+    "size_bytes": 150901
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_noise_007.png",
     "label": "OOD",
-    "domain": "ood_noise"
+    "domain": "ood_noise",
+    "sha256": "7d96d61d5e03bad931a019fafc59b90d269ae4abeefb4cadc7ed56cbe86aa2b6",
+    "size_bytes": 150899
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_noise_008.png",
     "label": "OOD",
-    "domain": "ood_noise"
+    "domain": "ood_noise",
+    "sha256": "04d8cf12d732f23107ea21044ef3a9e3afc9187152479a8b14244bd2f80c6d84",
+    "size_bytes": 150935
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_noise_009.png",
     "label": "OOD",
-    "domain": "ood_noise"
+    "domain": "ood_noise",
+    "sha256": "7bd3480eea8c974acc6abbe7664321cd4378ca589d7e5861ace51e5bd3c9e620",
+    "size_bytes": 150971
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_noise_010.png",
     "label": "OOD",
-    "domain": "ood_noise"
+    "domain": "ood_noise",
+    "sha256": "a8f192c513ab7368e7cb4d98ba12f9070ecee40d6c7dd76ef8ea4af122dcdb59",
+    "size_bytes": 150969
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_noise_011.png",
     "label": "OOD",
-    "domain": "ood_noise"
+    "domain": "ood_noise",
+    "sha256": "b9688fca821d3a89881ed85c1f2686c9d94a2b75a8ff34e7b93a37b34a9dc4fa",
+    "size_bytes": 150864
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_noise_012.png",
     "label": "OOD",
-    "domain": "ood_noise"
+    "domain": "ood_noise",
+    "sha256": "2d08ec7986c8ff20e1f046e8f29cef8bab623cc329067a2ba7ce0a91205b8471",
+    "size_bytes": 150969
   },
   {
     "path": "benchmarks\\empirical_run\\images\\ood_noise_013.png",
     "label": "OOD",
-    "domain": "ood_noise"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_noise_014.png",
-    "label": "OOD",
-    "domain": "ood_noise"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_noise_015.png",
-    "label": "OOD",
-    "domain": "ood_noise"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_noise_016.png",
-    "label": "OOD",
-    "domain": "ood_noise"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_noise_017.png",
-    "label": "OOD",
-    "domain": "ood_noise"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_noise_018.png",
-    "label": "OOD",
-    "domain": "ood_noise"
-  },
-  {
-    "path": "benchmarks\\empirical_run\\images\\ood_noise_019.png",
-    "label": "OOD",
-    "domain": "ood_noise"
+    "domain": "ood_noise",
+    "sha256": "e1539dbfd6c0141473fcaa4d799536075aeb0e23698ab10247e5a603c3127525",
+    "size_bytes": 150969
   }
 ]

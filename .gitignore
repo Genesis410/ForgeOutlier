@@ -20,6 +20,7 @@ venv/
 outputs/
 reports/
 dist/
+benchmarks/empirical_run/images/
 build/
 *.egg-info/
 .pytest_cache/

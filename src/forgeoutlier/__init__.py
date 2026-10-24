@@ -8,7 +8,7 @@ from forgeoutlier.models.loader import load_checkpoint
 from forgeoutlier.ood.serialization import load_ood_artifact
 from forgeoutlier.pipeline.inference import InferencePipeline
 
-__version__ = "1.0.0"
+__version__ = "1.2.0"
 
 
 def load_pipeline(

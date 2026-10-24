@@ -1,0 +1,86 @@
+{
+  "clean": {
+    "confusion_matrix": {
+      "REAL": {
+        "REAL": 0,
+        "FAKE": 73,
+        "UNKNOWN": 27
+      },
+      "FAKE": {
+        "REAL": 0,
+        "FAKE": 0,
+        "UNKNOWN": 100
+      },
+      "OOD": {
+        "REAL": 0,
+        "FAKE": 0,
+        "UNKNOWN": 50
+      }
+    },
+    "fatal_error_rate_ood": 0.0,
+    "abstained_rate_ood": 1.0
+  },
+  "jpeg_q50": {
+    "confusion_matrix": {
+      "REAL": {
+        "REAL": 0,
+        "FAKE": 0,
+        "UNKNOWN": 100
+      },
+      "FAKE": {
+        "REAL": 0,
+        "FAKE": 0,
+        "UNKNOWN": 100
+      },
+      "OOD": {
+        "REAL": 0,
+        "FAKE": 0,
+        "UNKNOWN": 50
+      }
+    },
+    "fatal_error_rate_ood": 0.0,
+    "abstained_rate_ood": 1.0
+  },
+  "jpeg_q30": {
+    "confusion_matrix": {
+      "REAL": {
+        "REAL": 0,
+        "FAKE": 0,
+        "UNKNOWN": 100
+      },
+      "FAKE": {
+        "REAL": 0,
+        "FAKE": 0,
+        "UNKNOWN": 100
+      },
+      "OOD": {
+        "REAL": 0,
+        "FAKE": 0,
+        "UNKNOWN": 50
+      }
+    },
+    "fatal_error_rate_ood": 0.0,
+    "abstained_rate_ood": 1.0
+  },
+  "downscale_112": {
+    "confusion_matrix": {
+      "REAL": {
+        "REAL": 0,
+        "FAKE": 0,
+        "UNKNOWN": 100
+      },
+      "FAKE": {
+        "REAL": 0,
+        "FAKE": 0,
+        "UNKNOWN": 100
+      },
+      "OOD": {
+        "REAL": 0,
+        "FAKE": 0,
+        "UNKNOWN": 50
+      }
+    },
+    "fatal_error_rate_ood": 0.0,
+    "abstained_rate_ood": 1.0
+  }
+}

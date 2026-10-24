@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "forgeoutlier"
-version = "1.0.0"
+version = "1.2.0"
 description = "Lightweight Open-Set Deepfake Detection Library & CLI with Tri-State Abstention (CPU-First, Offline-First)"
 readme = "README.md"
 requires-python = ">=3.10"

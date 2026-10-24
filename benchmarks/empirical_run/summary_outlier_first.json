@@ -1,29 +1,29 @@
 {
-  "total_samples": 120,
-  "id_count": 40,
-  "ood_count": 80,
+  "total_samples": 250,
+  "id_count": 200,
+  "ood_count": 50,
   "auroc": 1.0,
   "auprc": 1.0,
   "fpr_at_95_tpr": 0.0,
   "confusion_matrix": {
     "REAL": {
       "REAL": 0,
-      "FAKE": 19,
-      "UNKNOWN": 1
+      "FAKE": 95,
+      "UNKNOWN": 5
     },
     "FAKE": {
       "REAL": 0,
       "FAKE": 0,
-      "UNKNOWN": 20
+      "UNKNOWN": 100
     },
     "OOD": {
       "REAL": 0,
       "FAKE": 0,
-      "UNKNOWN": 80
+      "UNKNOWN": 50
     }
   },
   "fatal_error_rate_ood": 0.0,
   "abstained_rate_ood": 1.0,
-  "aurc": 0.9474,
-  "ece": 0.0046
+  "aurc": 0.9895,
+  "ece": 0.0029
 }

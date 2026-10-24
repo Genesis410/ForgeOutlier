@@ -8,7 +8,7 @@ import numpy as np
 import torch
 
 from forgeoutlier.eval.dataset_synth import generate_benchmark_dataset
-from forgeoutlier.eval.benchmark import evaluate_dataset
+from forgeoutlier.eval.benchmark import evaluate_dataset, evaluate_robustness
 from forgeoutlier.eval.export import export_summary_json, export_confusion_matrix_csv, export_predictions_csv
 from forgeoutlier.models.model import DeepfakeModel
 from forgeoutlier.ood.mahalanobis import MahalanobisScorer
@@ -22,8 +22,8 @@ def run_empirical_benchmark():
     base_dir = Path("benchmarks/empirical_run")
     base_dir.mkdir(parents=True, exist_ok=True)
     
-    print("[1] Generating benchmark dataset (ID Real, ID Fake, OOD Anime, Medical, Underwater, Noise)...")
-    manifest_p = generate_benchmark_dataset(base_dir, n_per_category=20, seed=1337)
+    print("[1] Generating benchmark dataset (250 images: 100 REAL, 100 FAKE, 50 OOD)...")
+    manifest_p = generate_benchmark_dataset(base_dir, seed=1337)
     with open(manifest_p, "r", encoding="utf-8") as f:
         manifest_data = json.load(f)
 
@@ -97,7 +97,14 @@ def run_empirical_benchmark():
     with open(results_p, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2)
 
-    print("\n[4] Empirical Benchmark Completed. Results summary:")
+    # Phase 4: Robustness evaluation on champion policy
+    print("\n[4] Executing Phase 4 robustness evaluation (JPEG Q50, Q30, downscaling 112x112)...")
+    champion_pipeline = InferencePipeline(model=model, ood_scorer=scorer, policy=Policy.OUTLIER_FIRST)
+    robustness_metrics = evaluate_robustness(champion_pipeline, all_paths, all_labels, output_dir=base_dir)
+    with open(base_dir / "robustness_benchmark_results.json", "w", encoding="utf-8") as f:
+        json.dump(robustness_metrics, f, indent=2)
+
+    print("\n[5] Empirical Benchmark Completed. Results summary:")
     for pol_name, res in results.items():
         print(f"--- Policy: {pol_name} ---")
         print(f"    AUROC: {res['auroc']}")

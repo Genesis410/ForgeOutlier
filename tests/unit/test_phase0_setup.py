@@ -5,7 +5,7 @@ from forgeoutlier.core.types import Decision, MediaMeta, Policy, PredictionResul
 
 
 def test_package_metadata() -> None:
-    assert forgeoutlier.__version__ == "1.0.0"
+    assert forgeoutlier.__version__ == "1.2.0"
 
 
 def test_data_contract_serialization() -> None:

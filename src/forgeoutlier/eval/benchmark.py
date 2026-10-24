@@ -146,3 +146,60 @@ def evaluate_dataset(
         aurc=round(aurc_val, 4),
         ece=round(ece_val, 4),
     )
+
+
+def evaluate_robustness(
+    pipeline: InferencePipeline,
+    image_paths: List[str],
+    labels: List[str],
+    output_dir: Optional[Path] = None,
+) -> Dict[str, Any]:
+    """Evaluate pipeline robustness against perturbations according to Phase 4 spec.
+
+    Perturbations tested:
+      - JPEG compression artifacts (Q=30, Q=50)
+      - Resolution downscaling (112x112)
+    """
+    import io
+    from PIL import Image
+
+    def _apply_jpeg(img: Image.Image, quality: int) -> Image.Image:
+        buf = io.BytesIO()
+        img.convert("RGB").save(buf, format="JPEG", quality=quality)
+        buf.seek(0)
+        return Image.open(buf).convert("RGB")
+
+    perturbations = {
+        "clean": lambda img: img,
+        "jpeg_q50": lambda img: _apply_jpeg(img, quality=50),
+        "jpeg_q30": lambda img: _apply_jpeg(img, quality=30),
+        "downscale_112": lambda img: img.resize((112, 112), Image.Resampling.BILINEAR).resize(img.size, Image.Resampling.BILINEAR),
+    }
+
+    robustness_results: Dict[str, Any] = {}
+    scratch_p = (output_dir if output_dir else Path(".")).resolve() / "_temp_perturbed.jpg"
+
+    for pert_name, pert_fn in perturbations.items():
+        perturbed_decisions = []
+        for p in image_paths:
+            img = Image.open(p).convert("RGB")
+            p_img = pert_fn(img)
+            p_img.save(scratch_p, format="JPEG", quality=95)
+            res = pipeline.predict_image(scratch_p)
+            perturbed_decisions.append(res.decision.value)
+
+        cm = compute_tristate_confusion_matrix(labels, perturbed_decisions)
+        ood_total = sum(1 for gt in labels if str(gt).upper() in ("OOD", "UNKNOWN"))
+        fatal_ood = cm.get("OOD", {}).get("REAL", 0)
+        abstained_ood = cm.get("OOD", {}).get("UNKNOWN", 0)
+
+        robustness_results[pert_name] = {
+            "confusion_matrix": cm,
+            "fatal_error_rate_ood": round(fatal_ood / ood_total, 4) if ood_total > 0 else 0.0,
+            "abstained_rate_ood": round(abstained_ood / ood_total, 4) if ood_total > 0 else 0.0,
+        }
+
+    if scratch_p.exists():
+        scratch_p.unlink()
+
+    return robustness_results

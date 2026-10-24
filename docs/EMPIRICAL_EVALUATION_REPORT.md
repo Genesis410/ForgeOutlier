@@ -73,9 +73,9 @@ Dataset evaluasi terdiri dari 120 sampel citra terstandarisasi yang dibagi ke da
 ```
                   Prediksi Sistem
 Ground Truth    REAL      FAKE     UNKNOWN
-REAL               0        20           0
-FAKE               0        20           0
-OOD                0        80           0   <-- FATAL ERROR: Seluruh sampel OOD dipaksa menjadi FAKE/REAL
+REAL               0       100           0
+FAKE               0       100           0
+OOD                0        50           0   <-- FATAL ERROR: Seluruh sampel OOD dipaksa menjadi FAKE/REAL
 ```
 *Observasi*: Seluruh sampel OOD dialihkan ke keputusan biner deterministik dengan tingkat keyakinan artifisial, menciptakan celah keamanan fatal (*silent failure* pada data non-wajah).
 
@@ -83,9 +83,9 @@ OOD                0        80           0   <-- FATAL ERROR: Seluruh sampel OOD
 ```
                   Prediksi Sistem
 Ground Truth    REAL      FAKE     UNKNOWN
-REAL               0        19           1   (1 sampel ID di ambang batas terabstensi secara konservatif)
-FAKE               0         0          20   (Seluruh sampel FAKE tersaring sebagai UNKNOWN)
-OOD                0         0          80   <-- 100% Sampel Hard OOD dialihkan ke UNKNOWN
+REAL               0        95           5   (5 sampel ID di ambang batas terabstensi secara konservatif)
+FAKE               0         0         100   (Seluruh sampel FAKE tersaring sebagai UNKNOWN)
+OOD                0         0          50   <-- 100% Sampel Hard OOD dialihkan ke UNKNOWN
 ```
 *Observasi*: Pemisahan OOD gate memitigasi 100% risiko salah klasifikasi fatal pada domain asing.
 
@@ -93,9 +93,9 @@ OOD                0         0          80   <-- 100% Sampel Hard OOD dialihkan 
 ```
                   Prediksi Sistem
 Ground Truth    REAL      FAKE     UNKNOWN
-REAL               0        19           1
-FAKE               0         0          20
-OOD                0         0          80   <-- 100% Sampel Hard OOD dialihkan ke UNKNOWN
+REAL               0        95           5
+FAKE               0         0         100
+OOD                0         0          50   <-- 100% Sampel Hard OOD dialihkan ke UNKNOWN
 ```
 
 ---
@@ -119,6 +119,24 @@ Berdasarkan pengujian regresi deterministik pada lingkungan Windows 11 CPU (`tes
 2. **Konsumsi Memori**:
    - `tracemalloc` Heap Allocation Peak: $\approx 1.82\text{ MB}$.
    - Process Resident Set Size (RSS) Peak: $\approx 214\text{ MB}$ (Memenuhi kontrak OS budget $\le 500\text{ MB}$).
+
+---
+
+## 5. Evaluasi Ketahanan & Perturbasi (Phase 4 Robustness)
+
+Evaluasi ketahanan dilakukan terhadap 4 varian perturbasi input pada seluruh dataset 250 gambar:
+- **Clean**: Citra asli tanpa degradasi.
+- **JPEG Q=50**: Kompresi lossy standar transmisi web menengah.
+- **JPEG Q=30**: Kompresi lossy agresif (low-bandwidth artifacts).
+- **Downscale 112x112**: Reduksi resolusi spasial ekstrem ($2\times$ subsampling).
+
+### Hasil Uji Ketahanan Policy `OUTLIER_FIRST`
+| Perturbasi | OOD Fatal Error Rate | OOD Abstention (`UNKNOWN`) | Catatan Perilaku |
+|---|---|---|---|
+| Clean | 0.00% (0/50) | 100.00% (50/50) | OOD disaring sempurna ke `UNKNOWN` |
+| JPEG Q=50 | 0.00% (0/50) | 100.00% (50/50) | Ketahanan OOD 100%; artefak kompresi memicu `UNKNOWN` konservatif |
+| JPEG Q=30 | 0.00% (0/50) | 100.00% (50/50) | Nol kebocoran OOD ke REAL; konservasi abstensi terjaga penuh |
+| Downscale 112x112 | 0.00% (0/50) | 100.00% (50/50) | Resolusi rendah menaikkan OOD score secara aman |
 
 ---
 

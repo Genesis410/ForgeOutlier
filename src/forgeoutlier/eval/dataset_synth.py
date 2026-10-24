@@ -11,85 +11,103 @@ import numpy as np
 from PIL import Image
 
 
-def generate_benchmark_dataset(base_dir: Path, n_per_category: int = 25, seed: int = 42) -> Path:
+def generate_benchmark_dataset(
+    base_dir: Path,
+    n_per_category: Optional[int] = None,
+    n_real: int = 100,
+    n_fake: int = 100,
+    n_ood_total: int = 50,
+    seed: int = 42,
+) -> Path:
     """Generate benchmark dataset and return path to manifest JSON.
 
-    Categories:
-      1. id_real: Natural human skin tones, facial symmetry, low frequency gradient.
-      2. id_fake: Deepfake artifacts, checkerboard frequency patterns, high-frequency blending boundaries.
-      3. ood_anime: High-saturation cartoon/anime styles, flat coloring, high contrast edges.
-      4. ood_medical: Grayscale cell microscopy / X-ray textures, circular structures.
-      5. ood_underwater: Monochromatic deep cyan/blue marine imagery with low contrast particulate noise.
-      6. ood_fractal: Abstract geometric fractals / noise patterns with extreme spectral distributions.
+    If n_per_category is provided, overrides category allocations (legacy compatibility).
+    Default allocation matches PRD-EVAL-SMALLDATA-001 (250 images: 100 REAL, 100 FAKE, 50 OOD).
     """
+    import hashlib
+
     rng = np.random.default_rng(seed)
     base_dir.mkdir(parents=True, exist_ok=True)
     images_dir = base_dir / "images"
     images_dir.mkdir(parents=True, exist_ok=True)
 
+    if n_per_category is not None:
+        c_real = n_per_category
+        c_fake = n_per_category
+        ood_share = n_per_category // 4
+        c_anime = ood_share
+        c_medical = ood_share
+        c_underwater = ood_share
+        c_noise = n_per_category - (ood_share * 3)
+    else:
+        c_real = n_real
+        c_fake = n_fake
+        ood_share = n_ood_total // 4
+        c_anime = ood_share
+        c_medical = ood_share
+        c_underwater = ood_share
+        c_noise = n_ood_total - (ood_share * 3)
+
     manifest_entries = []
 
-    # Category 1: ID - Real Faces (Simulated natural portraits)
-    for i in range(n_per_category):
-        # Soft skin tone gradient + slight noise
+    def _save_and_record(img_arr: np.ndarray, filename: str, label: str, domain: str, fmt: str = "JPEG", quality: int = 95):
+        img_p = images_dir / filename
+        if fmt == "PNG":
+            Image.fromarray(img_arr).save(img_p, format="PNG")
+        else:
+            Image.fromarray(img_arr).save(img_p, format="JPEG", quality=quality)
+        
+        sha256 = hashlib.sha256(img_p.read_bytes()).hexdigest()
+        manifest_entries.append({
+            "path": str(img_p),
+            "label": label,
+            "domain": domain,
+            "sha256": sha256,
+            "size_bytes": img_p.stat().st_size,
+        })
+
+    # Category 1: ID - Real Faces
+    for i in range(c_real):
         r = rng.normal(180, 15, (224, 224))
         g = rng.normal(140, 15, (224, 224))
         b = rng.normal(120, 15, (224, 224))
         img_arr = np.stack([r, g, b], axis=-1).clip(0, 255).astype(np.uint8)
-        img_p = images_dir / f"id_real_{i:03d}.jpg"
-        Image.fromarray(img_arr).save(img_p, format="JPEG", quality=95)
-        manifest_entries.append({"path": str(img_p), "label": "REAL", "domain": "id_natural"})
+        _save_and_record(img_arr, f"id_real_{i:03d}.jpg", "REAL", "id_natural", fmt="JPEG", quality=95)
 
     # Category 2: ID - Fake / Manipulated
-    for i in range(n_per_category):
-        # Base skin tone + checkerboard artifact / sharp splice box
+    for i in range(c_fake):
         r = rng.normal(180, 15, (224, 224))
         g = rng.normal(140, 15, (224, 224))
         b = rng.normal(120, 15, (224, 224))
-        # High-frequency boundary in center (blending artifact)
         r[80:144, 80:144] += rng.uniform(20, 50, (64, 64))
         img_arr = np.stack([r, g, b], axis=-1).clip(0, 255).astype(np.uint8)
-        img_p = images_dir / f"id_fake_{i:03d}.jpg"
-        Image.fromarray(img_arr).save(img_p, format="JPEG", quality=95)
-        manifest_entries.append({"path": str(img_p), "label": "FAKE", "domain": "id_manipulated"})
+        _save_and_record(img_arr, f"id_fake_{i:03d}.jpg", "FAKE", "id_manipulated", fmt="JPEG", quality=95)
 
     # Category 3: Hard OOD - Anime / Cartoon
-    for i in range(n_per_category):
-        # Vivid cartoon colors, flat blocks
+    for i in range(c_anime):
         img_arr = np.zeros((224, 224, 3), dtype=np.uint8)
-        img_arr[:, :] = [255, 105, 180]  # bright hot pink
-        img_arr[50:180, 50:180] = [0, 255, 255]  # cyan block
-        img_p = images_dir / f"ood_anime_{i:03d}.png"
-        Image.fromarray(img_arr).save(img_p, format="PNG")
-        manifest_entries.append({"path": str(img_p), "label": "OOD", "domain": "ood_anime"})
+        img_arr[:, :] = [255, 105, 180]
+        img_arr[50:180, 50:180] = [0, 255, 255]
+        _save_and_record(img_arr, f"ood_anime_{i:03d}.png", "OOD", "ood_anime", fmt="PNG")
 
     # Category 4: Hard OOD - Medical Microscopy
-    for i in range(n_per_category):
-        # Monochromatic grayscale cell textures
+    for i in range(c_medical):
         gray = rng.gamma(shape=2.0, scale=30.0, size=(224, 224)).clip(0, 255).astype(np.uint8)
         img_arr = np.stack([gray, gray, gray], axis=-1)
-        img_p = images_dir / f"ood_medical_{i:03d}.png"
-        Image.fromarray(img_arr).save(img_p, format="PNG")
-        manifest_entries.append({"path": str(img_p), "label": "OOD", "domain": "ood_medical"})
+        _save_and_record(img_arr, f"ood_medical_{i:03d}.png", "OOD", "ood_medical", fmt="PNG")
 
     # Category 5: Hard OOD - Deep Underwater
-    for i in range(n_per_category):
-        # Low contrast deep cyan/navy
+    for i in range(c_underwater):
         r = rng.uniform(5, 25, (224, 224))
         g = rng.uniform(40, 90, (224, 224))
         b = rng.uniform(90, 160, (224, 224))
         img_arr = np.stack([r, g, b], axis=-1).clip(0, 255).astype(np.uint8)
-        img_p = images_dir / f"ood_underwater_{i:03d}.jpg"
-        Image.fromarray(img_arr).save(img_p, format="JPEG", quality=85)
-        manifest_entries.append({"path": str(img_p), "label": "OOD", "domain": "ood_underwater"})
+        _save_and_record(img_arr, f"ood_underwater_{i:03d}.jpg", "OOD", "ood_underwater", fmt="JPEG", quality=85)
 
     # Category 6: Hard OOD - Geometric / High Frequency Noise
-    for i in range(n_per_category):
-        # Pure high frequency uniform noise (extreme out of distribution)
+    for i in range(c_noise):
         img_arr = rng.integers(0, 256, (224, 224, 3), dtype=np.uint8)
-        img_p = images_dir / f"ood_noise_{i:03d}.png"
-        Image.fromarray(img_arr).save(img_p, format="PNG")
-        manifest_entries.append({"path": str(img_p), "label": "OOD", "domain": "ood_noise"})
+        _save_and_record(img_arr, f"ood_noise_{i:03d}.png", "OOD", "ood_noise", fmt="PNG")
 
     manifest_p = base_dir / "manifest.json"
     with open(manifest_p, "w", encoding="utf-8") as f:
