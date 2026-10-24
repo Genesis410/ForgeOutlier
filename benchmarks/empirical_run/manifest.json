@@ -1,0 +1,602 @@
+[
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_000.jpg",
+    "label": "REAL",
+    "domain": "id_natural"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_001.jpg",
+    "label": "REAL",
+    "domain": "id_natural"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_002.jpg",
+    "label": "REAL",
+    "domain": "id_natural"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_003.jpg",
+    "label": "REAL",
+    "domain": "id_natural"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_004.jpg",
+    "label": "REAL",
+    "domain": "id_natural"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_005.jpg",
+    "label": "REAL",
+    "domain": "id_natural"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_006.jpg",
+    "label": "REAL",
+    "domain": "id_natural"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_007.jpg",
+    "label": "REAL",
+    "domain": "id_natural"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_008.jpg",
+    "label": "REAL",
+    "domain": "id_natural"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_009.jpg",
+    "label": "REAL",
+    "domain": "id_natural"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_010.jpg",
+    "label": "REAL",
+    "domain": "id_natural"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_011.jpg",
+    "label": "REAL",
+    "domain": "id_natural"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_012.jpg",
+    "label": "REAL",
+    "domain": "id_natural"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_013.jpg",
+    "label": "REAL",
+    "domain": "id_natural"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_014.jpg",
+    "label": "REAL",
+    "domain": "id_natural"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_015.jpg",
+    "label": "REAL",
+    "domain": "id_natural"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_016.jpg",
+    "label": "REAL",
+    "domain": "id_natural"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_017.jpg",
+    "label": "REAL",
+    "domain": "id_natural"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_018.jpg",
+    "label": "REAL",
+    "domain": "id_natural"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_real_019.jpg",
+    "label": "REAL",
+    "domain": "id_natural"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_000.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_001.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_002.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_003.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_004.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_005.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_006.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_007.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_008.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_009.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_010.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_011.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_012.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_013.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_014.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_015.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_016.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_017.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_018.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\id_fake_019.jpg",
+    "label": "FAKE",
+    "domain": "id_manipulated"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_anime_000.png",
+    "label": "OOD",
+    "domain": "ood_anime"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_anime_001.png",
+    "label": "OOD",
+    "domain": "ood_anime"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_anime_002.png",
+    "label": "OOD",
+    "domain": "ood_anime"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_anime_003.png",
+    "label": "OOD",
+    "domain": "ood_anime"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_anime_004.png",
+    "label": "OOD",
+    "domain": "ood_anime"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_anime_005.png",
+    "label": "OOD",
+    "domain": "ood_anime"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_anime_006.png",
+    "label": "OOD",
+    "domain": "ood_anime"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_anime_007.png",
+    "label": "OOD",
+    "domain": "ood_anime"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_anime_008.png",
+    "label": "OOD",
+    "domain": "ood_anime"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_anime_009.png",
+    "label": "OOD",
+    "domain": "ood_anime"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_anime_010.png",
+    "label": "OOD",
+    "domain": "ood_anime"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_anime_011.png",
+    "label": "OOD",
+    "domain": "ood_anime"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_anime_012.png",
+    "label": "OOD",
+    "domain": "ood_anime"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_anime_013.png",
+    "label": "OOD",
+    "domain": "ood_anime"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_anime_014.png",
+    "label": "OOD",
+    "domain": "ood_anime"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_anime_015.png",
+    "label": "OOD",
+    "domain": "ood_anime"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_anime_016.png",
+    "label": "OOD",
+    "domain": "ood_anime"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_anime_017.png",
+    "label": "OOD",
+    "domain": "ood_anime"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_anime_018.png",
+    "label": "OOD",
+    "domain": "ood_anime"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_anime_019.png",
+    "label": "OOD",
+    "domain": "ood_anime"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_medical_000.png",
+    "label": "OOD",
+    "domain": "ood_medical"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_medical_001.png",
+    "label": "OOD",
+    "domain": "ood_medical"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_medical_002.png",
+    "label": "OOD",
+    "domain": "ood_medical"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_medical_003.png",
+    "label": "OOD",
+    "domain": "ood_medical"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_medical_004.png",
+    "label": "OOD",
+    "domain": "ood_medical"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_medical_005.png",
+    "label": "OOD",
+    "domain": "ood_medical"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_medical_006.png",
+    "label": "OOD",
+    "domain": "ood_medical"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_medical_007.png",
+    "label": "OOD",
+    "domain": "ood_medical"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_medical_008.png",
+    "label": "OOD",
+    "domain": "ood_medical"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_medical_009.png",
+    "label": "OOD",
+    "domain": "ood_medical"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_medical_010.png",
+    "label": "OOD",
+    "domain": "ood_medical"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_medical_011.png",
+    "label": "OOD",
+    "domain": "ood_medical"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_medical_012.png",
+    "label": "OOD",
+    "domain": "ood_medical"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_medical_013.png",
+    "label": "OOD",
+    "domain": "ood_medical"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_medical_014.png",
+    "label": "OOD",
+    "domain": "ood_medical"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_medical_015.png",
+    "label": "OOD",
+    "domain": "ood_medical"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_medical_016.png",
+    "label": "OOD",
+    "domain": "ood_medical"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_medical_017.png",
+    "label": "OOD",
+    "domain": "ood_medical"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_medical_018.png",
+    "label": "OOD",
+    "domain": "ood_medical"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_medical_019.png",
+    "label": "OOD",
+    "domain": "ood_medical"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_underwater_000.jpg",
+    "label": "OOD",
+    "domain": "ood_underwater"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_underwater_001.jpg",
+    "label": "OOD",
+    "domain": "ood_underwater"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_underwater_002.jpg",
+    "label": "OOD",
+    "domain": "ood_underwater"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_underwater_003.jpg",
+    "label": "OOD",
+    "domain": "ood_underwater"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_underwater_004.jpg",
+    "label": "OOD",
+    "domain": "ood_underwater"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_underwater_005.jpg",
+    "label": "OOD",
+    "domain": "ood_underwater"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_underwater_006.jpg",
+    "label": "OOD",
+    "domain": "ood_underwater"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_underwater_007.jpg",
+    "label": "OOD",
+    "domain": "ood_underwater"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_underwater_008.jpg",
+    "label": "OOD",
+    "domain": "ood_underwater"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_underwater_009.jpg",
+    "label": "OOD",
+    "domain": "ood_underwater"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_underwater_010.jpg",
+    "label": "OOD",
+    "domain": "ood_underwater"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_underwater_011.jpg",
+    "label": "OOD",
+    "domain": "ood_underwater"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_underwater_012.jpg",
+    "label": "OOD",
+    "domain": "ood_underwater"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_underwater_013.jpg",
+    "label": "OOD",
+    "domain": "ood_underwater"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_underwater_014.jpg",
+    "label": "OOD",
+    "domain": "ood_underwater"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_underwater_015.jpg",
+    "label": "OOD",
+    "domain": "ood_underwater"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_underwater_016.jpg",
+    "label": "OOD",
+    "domain": "ood_underwater"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_underwater_017.jpg",
+    "label": "OOD",
+    "domain": "ood_underwater"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_underwater_018.jpg",
+    "label": "OOD",
+    "domain": "ood_underwater"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_underwater_019.jpg",
+    "label": "OOD",
+    "domain": "ood_underwater"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_noise_000.png",
+    "label": "OOD",
+    "domain": "ood_noise"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_noise_001.png",
+    "label": "OOD",
+    "domain": "ood_noise"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_noise_002.png",
+    "label": "OOD",
+    "domain": "ood_noise"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_noise_003.png",
+    "label": "OOD",
+    "domain": "ood_noise"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_noise_004.png",
+    "label": "OOD",
+    "domain": "ood_noise"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_noise_005.png",
+    "label": "OOD",
+    "domain": "ood_noise"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_noise_006.png",
+    "label": "OOD",
+    "domain": "ood_noise"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_noise_007.png",
+    "label": "OOD",
+    "domain": "ood_noise"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_noise_008.png",
+    "label": "OOD",
+    "domain": "ood_noise"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_noise_009.png",
+    "label": "OOD",
+    "domain": "ood_noise"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_noise_010.png",
+    "label": "OOD",
+    "domain": "ood_noise"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_noise_011.png",
+    "label": "OOD",
+    "domain": "ood_noise"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_noise_012.png",
+    "label": "OOD",
+    "domain": "ood_noise"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_noise_013.png",
+    "label": "OOD",
+    "domain": "ood_noise"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_noise_014.png",
+    "label": "OOD",
+    "domain": "ood_noise"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_noise_015.png",
+    "label": "OOD",
+    "domain": "ood_noise"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_noise_016.png",
+    "label": "OOD",
+    "domain": "ood_noise"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_noise_017.png",
+    "label": "OOD",
+    "domain": "ood_noise"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_noise_018.png",
+    "label": "OOD",
+    "domain": "ood_noise"
+  },
+  {
+    "path": "benchmarks\\empirical_run\\images\\ood_noise_019.png",
+    "label": "OOD",
+    "domain": "ood_noise"
+  }
+]

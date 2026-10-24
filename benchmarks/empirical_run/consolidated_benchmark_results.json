@@ -1,0 +1,89 @@
+{
+  "outlier_first": {
+    "total_samples": 120,
+    "id_count": 40,
+    "ood_count": 80,
+    "auroc": 1.0,
+    "auprc": 1.0,
+    "fpr_at_95_tpr": 0.0,
+    "confusion_matrix": {
+      "REAL": {
+        "REAL": 0,
+        "FAKE": 19,
+        "UNKNOWN": 1
+      },
+      "FAKE": {
+        "REAL": 0,
+        "FAKE": 0,
+        "UNKNOWN": 20
+      },
+      "OOD": {
+        "REAL": 0,
+        "FAKE": 0,
+        "UNKNOWN": 80
+      }
+    },
+    "fatal_error_rate_ood": 0.0,
+    "abstained_rate_ood": 1.0,
+    "aurc": 0.9474,
+    "ece": 0.0046
+  },
+  "dual_score": {
+    "total_samples": 120,
+    "id_count": 40,
+    "ood_count": 80,
+    "auroc": 1.0,
+    "auprc": 1.0,
+    "fpr_at_95_tpr": 0.0,
+    "confusion_matrix": {
+      "REAL": {
+        "REAL": 0,
+        "FAKE": 19,
+        "UNKNOWN": 1
+      },
+      "FAKE": {
+        "REAL": 0,
+        "FAKE": 0,
+        "UNKNOWN": 20
+      },
+      "OOD": {
+        "REAL": 0,
+        "FAKE": 0,
+        "UNKNOWN": 80
+      }
+    },
+    "fatal_error_rate_ood": 0.0,
+    "abstained_rate_ood": 1.0,
+    "aurc": 0.9474,
+    "ece": 0.0046
+  },
+  "baseline_naive": {
+    "total_samples": 120,
+    "id_count": 40,
+    "ood_count": 80,
+    "auroc": 1.0,
+    "auprc": 1.0,
+    "fpr_at_95_tpr": 0.0,
+    "confusion_matrix": {
+      "REAL": {
+        "REAL": 0,
+        "FAKE": 20,
+        "UNKNOWN": 0
+      },
+      "FAKE": {
+        "REAL": 0,
+        "FAKE": 20,
+        "UNKNOWN": 0
+      },
+      "OOD": {
+        "REAL": 0,
+        "FAKE": 80,
+        "UNKNOWN": 0
+      }
+    },
+    "fatal_error_rate_ood": 0.0,
+    "abstained_rate_ood": 0.0,
+    "aurc": 0.7574,
+    "ece": 0.0046
+  }
+}

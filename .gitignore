@@ -1,0 +1,23 @@
+# ForgeOutlier Lite - Git Ignore
+.confidential/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+.venv/
+env/
+venv/
+*.pt
+*.pth
+*.npz
+outputs/
+reports/
+dist/
+build/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+.mypy_cache/
